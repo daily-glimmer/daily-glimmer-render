@@ -48,13 +48,30 @@ def main(manifest_path, workdir="work"):
                 "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
                 "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2", "-shortest", str(dst)]
         run(cmd)
-        chapters.append(f"{fmt(t)} {seg.get('title', f'Part {i+1}')}")
-        t += duration(dst)
         parts.append(dst)
-    lst = wd / "list.txt"
-    lst.write_text("".join(f"file '{p.resolve()}'\n" for p in parts))
-    run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy",
-         "-movflags", "+faststart", "out.mp4"])
+    # Smooth transitions: crossfade video (xfade) and audio (acrossfade) between all parts
+    XF = float(m.get("transition_seconds", 0.8))
+    style = m.get("transition", "fade")
+    durs = [duration(p) for p in parts]
+    cmd = ["ffmpeg", "-y"]
+    for p in parts:
+        cmd += ["-i", str(p)]
+    fc, v, a, off = [], "[0:v]", "[0:a]", 0.0
+    for i in range(1, len(parts)):
+        off += durs[i - 1] - XF
+        fc.append(f"{v}[{i}:v]xfade=transition={style}:duration={XF}:offset={off:.3f}[v{i}]")
+        fc.append(f"{a}[{i}:a]acrossfade=d={XF}[a{i}]")
+        v, a = f"[v{i}]", f"[a{i}]"
+    if len(parts) > 1:
+        cmd += ["-filter_complex", ";".join(fc), "-map", v, "-map", a]
+    cmd += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-c:a", "aac", "-b:a", "192k",
+            "-movflags", "+faststart", "out.mp4"]
+    run(cmd)
+    # chapter times shift by the overlaps
+    chapters, t = [], 0.0
+    for i, seg in enumerate(m["segments"]):
+        chapters.append(f"{fmt(t)} {seg.get('title', f'Part {i+1}')}")
+        t += durs[i] - (XF if i < len(parts) - 1 else 0)
     pathlib.Path("chapters.txt").write_text("\n".join(chapters) + "\n")
     print(f"done: {fmt(t)} total, {len(parts)} parts")
 

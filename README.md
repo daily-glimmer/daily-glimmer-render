@@ -1,5 +1,5 @@
 # Daily Glimmer – weekly long video renderer
-Pushing `manifests/<date>.json` renders a 16:9 compilation (vertical Shorts on a blurred background) with ffmpeg on GitHub Actions and publishes `out.mp4` + `chapters.txt` as a GitHub Release named `<date>`.
+Pushing `manifests/<date>.json` renders a 16:9 compilation (vertical Shorts on a blurred background, smooth crossfades between all parts – `transition`/`transition_seconds` in the manifest, default fade 0.8 s) with ffmpeg on GitHub Actions and publishes `out.mp4` + `chapters.txt` as a GitHub Release named `<date>`.
 
 Manifest format:
 ```json
