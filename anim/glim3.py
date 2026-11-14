@@ -868,12 +868,233 @@ def sc_fireflies(i, P, t, u):
         P.text(810, CENTER + 300, "ON" if on else "OFF", 56, CLOUD)
         P.text(540, CENTER - 430, "oxygen = switch", 62, GLIM)
 
+
+# ---------- Chamäleon, Elefant, Spinne (Nachtlauf A 14.11. 21:54) ----------
+def chameleon(P, x, y, s, t, col=(90, 190, 90), tongue=0., tx=None, ty=None, flip=1):
+    f = flip; dark = dk(col, 170); lite = lc(col, CLOUD, .35)
+    cx = x + f * 170 * s                                                     # eingerollter Schwanz
+    for k in range(3): P.arc(cx + f * 30 * s, y + 20 * s, (70 - k * 20) * s, 0, 360, col, (26 - k * 6) * s)
+    P.ell(x, y, 160 * s, 95 * s, col)
+    for k in range(5): P.poly([(x + f * (-90 + k * 45) * s, y - 85 * s), (x + f * (-70 + k * 45) * s, y - 120 * s), (x + f * (-50 + k * 45) * s, y - 85 * s)], dark)
+    for k in range(4): P.arc(x + f * (-60 + k * 45) * s, y + 10 * s, 28 * s, 200, 340, lite, 6 * s)
+    hx = x - f * 160 * s; hy = y - 25 * s
+    P.poly([(hx + f * 60 * s, hy - 60 * s), (hx - f * 20 * s, hy - 110 * s), (hx - f * 90 * s, hy + 10 * s), (hx + f * 60 * s, hy + 60 * s)], col)
+    mx, my = hx - f * 80 * s, hy + 15 * s
+    P.line([(mx, my), (hx + f * 30 * s, hy + 30 * s)], dark, 5 * s)
+    if tongue > 0:
+        ex, ey = (tx, ty) if tx is not None else (mx - f * 300 * s, my)
+        bx, by = lerp(mx, ex, tongue), lerp(my, ey, tongue)
+        P.line([(mx, my), (bx, by)], (240, 120, 150), 16 * s); P.circ(bx, by, 26 * s, (255, 140, 170), outline=(200, 80, 110), w=3)
+    ex_, ey_ = hx - f * 5 * s, hy - 20 * s
+    P.circ(ex_, ey_, 38 * s, lite, outline=dark, w=4)
+    a = t * 1.3; P.circ(ex_ - f * 12 * s + math.cos(a) * 8 * s, ey_ + math.sin(a) * 8 * s, 11 * s, NIGHT)
+    for dx in (-80, 70):
+        P.line([(x + f * dx * s, y + 60 * s), (x + f * (dx - 20) * s, y + 120 * s)], col, 22 * s)
+
+def branch(P, y, x0=0, x1=W):
+    P.line([(x0, y), (x1, y - 30)], (110, 75, 45), 34)
+    for k in range(3): P.ell(x0 + 200 + k * 300, y - 30 - k * 10, 50, 22, (70, 160, 80))
+
+def fly(P, x, y, s, t):
+    wa = math.sin(t * 50)
+    for dx in (-1, 1): P.ell(x + dx * 18 * s, y - 20 * s - wa * 5 * s, 22 * s, 14 * s, (220, 235, 255), outline=(150, 170, 200), w=2)
+    P.ell(x, y, 26 * s, 18 * s, (60, 60, 70)); P.circ(x - 22 * s, y - 4 * s, 12 * s, (150, 40, 40))
+
+def sc_chameleons(i, P, t, u):
+    if i == 0:
+        branch(P, CENTER + 260)
+        fx, fy = 300 + math.sin(t * 3) * 60, CENTER - 140 + math.sin(t * 5) * 40
+        k = seg(u, 1.3, 1.45) - seg(u, 1.6, 1.9)
+        if u < 1.6: fly(P, fx, fy, 1.4, t)
+        chameleon(P, 640, CENTER + 120, 1.15, t, tongue=k, tx=fx, ty=fy)
+        if u > 1.6: P.text(320, CENTER - 300, "GOT IT!", 70 * back(seg(u, 1.6, 2.0)), GLIM)
+    elif i == 1:
+        P.rrect(240, CENTER - 40, 840, CENTER + 40, 40, (240, 225, 190), outline=(190, 170, 130), w=6)
+        k = eout(seg(u, .2, 1.0))
+        for j in range(5): P.rrect(280 + j * 105, CENTER - 90, 360 + j * 105, CENTER + 90, 30, (240, 120, 150), outline=(190, 80, 110), w=5)
+        P.circ(240, CENTER, 70, (255, 140, 170), outline=(200, 80, 110), w=5)
+        P.arc(540, CENTER + 420, 300 * k + 1, 200, 340, (150, 100, 60), 12)
+        P.line([(300, CENTER + 340), (780, CENTER + 340)], (230, 230, 230), 4)
+        P.line([(260, CENTER + 340), (800, CENTER + 340)], (150, 100, 60), 8); P.poly([(240, CENTER + 340), (280, CENTER + 320), (280, CENTER + 360)], HOOK)
+        P.text(540, CENTER - 200, "tongue on a bone", 60, GLIM)
+    elif i == 2:
+        sq = .5 + .5 * math.sin(t * 2.5); sq = eio(seg(u, .3, 2.5)) * .6 + .1 * sq
+        pts = []
+        for j in range(25):
+            q = j / 24; pts.append((lerp(200, 880 - 260 * sq, q), CENTER + math.sin(q * 30) * 70 * (1 + sq)))
+        P.line(pts, (240, 120, 150), 14)
+        for j in range(4): P.ell(620 - j * 30 - 200 * sq, CENTER, 40, 140, None, outline=HOOK, w=10)
+        P.text(540, CENTER - 300, "loaded like a spring", 60, GLIM)
+        P.text(540, CENTER + 300, "ring muscle squeezes", 52, CLOUD)
+    elif i == 3:
+        branch(P, CENTER + 120)
+        k = eout(seg(u, .4, .6)) - eio(seg(u, 2.6, 3.4))
+        chameleon(P, 780, CENTER - 20, .65, t, tongue=k, tx=150, ty=CENTER - 140)
+        if u < 2.6: fly(P, 150, CENTER - 140, 1.0, t)
+        P.line([(160, CENTER + 330), (900, CENTER + 330)], GLIM, 8); P.line([(160, CENTER + 300), (160, CENTER + 360)], GLIM, 8); P.line([(900, CENTER + 300), (900, CENTER + 360)], GLIM, 8)
+        P.text(540, CENTER + 430, "up to 2x body length", 56, GLIM)
+    elif i == 4:
+        P.circ(540, CENTER - 20, 260, (255, 140, 170), outline=(200, 80, 110), w=10)
+        for j in range(5):
+            q = (u * .5 + j / 5) % 1
+            P.ell(380 + j * 80, CENTER + 230 + q * 140, 14, 20 + q * 30, (255, 200, 220))
+        fly(P, 540, CENTER - 60, 2.4 * back(seg(u, .3, .8)), 0)
+        P.text(540, CENTER + 470, "super sticky", 70, GLIM)
+    else:
+        P.arc(540, CENTER + 60, 280, 180, 360, CLOUD, 30)
+        for j in range(7):
+            a = math.pi + j / 6 * math.pi; P.line([(540 + math.cos(a) * 230, CENTER + 60 + math.sin(a) * 230), (540 + math.cos(a) * 270, CENTER + 60 + math.sin(a) * 270)], NIGHT, 8)
+        a = math.pi + eout(seg(u, .3, .45)) * math.pi * .95
+        P.line([(540, CENTER + 60), (540 + math.cos(a) * 240, CENTER + 60 + math.sin(a) * 240)], HOOK, 14); P.circ(540, CENTER + 60, 22, NIGHT)
+        P.text(540, CENTER + 150, "0 to 60 mph", 64, CLOUD)
+        P.text(540, CENTER - 430, "in 1/100 second!", 70, GLIM)
+        chameleon(P, 300, CENTER + 360, .45, t)
+
+def elephant(P, x, y, s, t, ear=1., flap=0., col=(150, 150, 160), veins=False, cool=0.):
+    dark = dk(col, 190); fl = 1 + .12 * math.sin(t * (3 + 6 * flap)) * (.3 + flap)
+    for side in (-1, 1):
+        ex = x + side * 190 * s * ear * fl
+        P.ell(ex, y + 20 * s, 170 * s * ear * fl, 220 * s * ear, dark)
+        P.ell(ex + side * 8 * s, y + 20 * s, 150 * s * ear * fl, 200 * s * ear, lc(col, (240, 170, 170), .35))
+        if veins:
+            vc = lc((220, 60, 70), (90, 140, 230), cool)
+            for k in range(5):
+                a = -1.1 + k * .55; pts = [(ex - side * 60 * s * ear, y + 20 * s)]
+                for j in range(1, 5): pts.append((ex - side * 60 * s * ear + side * math.cos(a) * j * 32 * s * ear * fl, y + 20 * s + math.sin(a) * j * 40 * s * ear + math.sin(j + k) * 8 * s))
+                P.line(pts, vc, 8 * s)
+    P.ell(x, y - 20 * s, 150 * s, 170 * s, col)
+    tw = math.sin(t * 1.5) * 30 * s
+    P.line([(x, y + 60 * s), (x - 5 * s, y + 200 * s), (x + 10 * s + tw, y + 320 * s), (x + 50 * s + tw, y + 360 * s)], col, 70 * s)
+    P.line([(x + 30 * s + tw, y + 330 * s), (x + 55 * s + tw, y + 365 * s)], dark, 20 * s)
+    for side in (-1, 1):
+        P.line([(x + side * 55 * s, y + 90 * s), (x + side * 80 * s, y + 190 * s), (x + side * 60 * s, y + 230 * s)], (250, 245, 230), 22 * s)
+        P.circ(x + side * 60 * s, y - 40 * s, 14 * s, NIGHT); P.circ(x + side * 56 * s, y - 45 * s, 5 * s, (255, 255, 255))
+
+def sc_elephants(i, P, t, u):
+    def savanna(y0=CENTER + 300):
+        P.poly([(0, y0), (W, y0), (W, H), (0, H)], (200, 170, 100))
+        P.ell(880, y0 - 40, 120, 40, (90, 140, 70)); P.line([(880, y0 - 30), (880, y0 + 40)], (110, 80, 50), 14)
+    if i == 0:
+        savanna(); elephant(P, 540, CENTER - 40, 1.2, t, flap=.4)
+    elif i == 1:
+        savanna(); P.circ(840, CENTER - 420, 90, (255, 210, 80), glow=mul(GLIM, 150))
+        for k in range(5):
+            q = (t * .6 + k / 5) % 1; x = 200 + k * 170
+            P.line([(x + math.sin(q * 12) * 15, CENTER + 280 - q * 300), (x + math.sin(q * 12 + 1) * 15, CENTER + 230 - q * 300)], lc((255, 160, 80), (40, 40, 60), q), 8)
+        elephant(P, 460, CENTER - 20, .9, t, flap=.2)
+        P.rrect(860, CENTER - 200, 920, CENTER + 200, 30, CLOUD, outline=(170, 170, 180), w=5)
+        h = 120 + 220 * eout(seg(u, .3, 3))
+        P.rrect(872, CENTER + 188 - h, 908, CENTER + 188, 18, HOOK)
+        P.text(540, CENTER + 470, "few sweat glands", 60, GLIM)
+    elif i == 2:
+        P.ell(540, CENTER, 380, 460, (120, 120, 135)); P.ell(555, CENTER, 345, 425, (215, 165, 165))
+        k = seg(u, .2, 2.5); pulse = .5 + .5 * math.sin(t * 6)
+        for j in range(7):
+            a = -1.4 + j * .47; pts = [(240, CENTER)]
+            n = int(1 + 6 * k)
+            for m in range(1, n + 1): pts.append((240 + math.cos(a) * m * 55, CENTER + math.sin(a) * m * 65 + math.sin(m * 1.3 + j) * 15))
+            P.line(pts, lc((200, 40, 60), (255, 90, 100), pulse), 12, glow=dk((255, 60, 80), 120))
+        P.text(540, CENTER + 560, "blood vessels", 66, GLIM)
+    elif i == 3:
+        savanna()
+        elephant(P, 540, CENTER - 40, 1.0, t, flap=1., veins=True, cool=eio(seg(u, .5, 3.0)))
+        for k in range(6):
+            q = (t * 1.2 + k / 6) % 1; side = 1 if k % 2 else -1
+            P.line([(540 + side * (330 + q * 150), CENTER - 150 + k * 40), (540 + side * (390 + q * 150), CENTER - 150 + k * 40)], lc((200, 240, 255), (40, 60, 90), q), 8)
+        P.text(540, CENTER + 470, "flap = cooler blood", 62, (170, 230, 255))
+    elif i == 4:
+        savanna()
+        e = 1 + .35 * back(seg(u, 1.5, 2.2))
+        elephant(P, 540, CENTER - 40, .95, t, ear=e)
+        for k in range(3):
+            q = (t * .7 + k / 3) % 1
+            P.arc(-150, CENTER - 40, 200 + q * 300, -40, 40, lc(GLIM, (40, 40, 60), q), 10 * (1 - q) + 3)
+        P.text(540, CENTER + 470, "look bigger!", 70, GLIM)
+    else:
+        savanna(CENTER + 200)
+        elephant(P, 230, CENTER + 60, .45, t, flap=.3); elephant(P, 850, CENTER + 60, .45, t + 1, flap=.3)
+        for k in range(4):
+            q = (t * .4 + k / 4) % 1
+            P.arc(230, CENTER + 40, 120 + q * 520, -25, 25, lc((255, 220, 140), (40, 40, 60), q), 12 * (1 - q) + 3)
+        P.text(540, CENTER - 430, "rumbles km away", 66, GLIM)
+
+def spider(P, x, y, s, t, col=(60, 55, 75), glands=0.):
+    lite = lc(col, CLOUD, .35)
+    for side in (-1, 1):
+        for k in range(4):
+            a = math.radians(-60 + k * 38) ; wig = math.sin(t * 4 + k) * 6 * s
+            kx, ky = x + side * math.cos(a) * 110 * s, y - 60 * s + math.sin(a) * 70 * s - 50 * s
+            P.line([(x + side * 30 * s, y - 20 * s + k * 12 * s), (kx, ky + wig), (kx + side * 70 * s, ky + 120 * s + wig)], col, 12 * s)
+    P.ell(x, y + 90 * s, 95 * s, 110 * s, col)
+    for k in range(3): P.ell(x, y + 60 * s + k * 40 * s, 40 * s - k * 8 * s, 10 * s, lite)
+    if glands:
+        for dx, dy, r_ in ((-35, 70, 26), (30, 90, 30), (-10, 130, 22), (35, 140, 18)):
+            P.circ(x + dx * s, y + dy * s, r_ * s * glands, (255, 220, 120), glow=dk(GLIM, 200 * glands))
+    P.ell(x, y - 20 * s, 60 * s, 55 * s, lc(col, (90, 80, 110), .5))
+    for dx in (-22, -8, 8, 22): P.circ(x + dx * s, y - 40 * s, 7 * s, (20, 20, 30)); P.circ(x + dx * s + 2 * s, y - 42 * s, 2.5 * s, (255, 255, 255))
+
+def web(P, x, y, r, k, col=(220, 230, 255), w=4):
+    for j in range(12):
+        a = j / 12 * 2 * math.pi; P.line([(x, y), (x + math.cos(a) * r, y + math.sin(a) * r)], col, w)
+    n = int(120 * k); pts = []
+    for m in range(n):
+        a = m / 12 * 2 * math.pi; rr = r * (1 - m / 130); pts.append((x + math.cos(a) * rr, y + math.sin(a) * rr))
+    if len(pts) > 1: P.line(pts, col, w * .8)
+
+def sc_spiders(i, P, t, u):
+    if i == 0:
+        k = eio(seg(u, 0, 3)); web(P, 540, CENTER - 80, 400, .3 + .7 * k)
+        spider(P, 540, CENTER - 120, .9, t)
+    elif i == 1:
+        spider(P, 540, CENTER - 60, 1.9, t, glands=eout(seg(u, .4, 1.4)))
+        P.text(540, CENTER + 470, "silk glands", 70, GLIM)
+    elif i == 2:
+        spider(P, 540, CENTER - 160, 1.6, t, glands=1)
+        for k, dx in enumerate((-35, 30, -10)):
+            for j in range(4):
+                q = (u * .8 + j / 4 + k * .2) % 1
+                P.circ(lerp(540 + dx * 1.6, 540 + (k - 1) * 20, q), lerp(CENTER - 160 + 110 * 1.6, CENTER - 160 + 190 * 1.6, q), 10, GLIM, glow=dk(GLIM, 220))
+        for k in range(3): P.ell(540 + (k - 1) * 22, CENTER - 160 + 195 * 1.6, 12, 18, (200, 190, 210))
+        P.text(540, CENTER + 470, "spinnerets", 70, GLIM)
+    elif i == 3:
+        spider(P, 540, CENTER - 420, .9, t, glands=1)
+        top = CENTER - 420 + 190 * .9; bot = CENTER + 380
+        P.line([(540, top), (540, top + (bot - top) * eout(seg(u, .2, 2)))], (230, 240, 255), 6, glow=dk((200, 220, 255), 120))
+        random.seed(11)
+        for j in range(16):
+            y = top + 40 + j * 40; q = clamp((y - top) / (bot - top))
+            a = lerp(random.random() * 3.14, 1.57, eio(q * 1.4))
+            x = 540 + lerp(random.random() * 120 - 60, 0, eio(q * 1.4)) + 70
+            P.line([(x - math.cos(a) * 18, y - math.sin(a) * 18), (x + math.cos(a) * 18, y + math.sin(a) * 18)], GLIM, 6)
+        P.text(270, top + 80, "liquid", 50, CLOUD); P.text(270, bot - 40, "solid!", 60, GLIM)
+    elif i == 4:
+        k = lambda d: back(seg(u, d, d + .5))
+        if k(.2) > 0: web(P, 230, CENTER - 150, 170 * k(.2), 1, w=3)
+        if k(.9) > 0:
+            P.circ(540, CENTER - 150, 110 * k(.9), (245, 245, 250), outline=(200, 200, 215), w=4)
+            for j in range(6): P.arc(540, CENTER - 150, 30 + j * 14, j * 50, j * 50 + 120, (215, 215, 230), 3)
+        if k(1.6) > 0:
+            P.line([(850, CENTER - 450), (850, CENTER - 150 + math.sin(t * 2) * 30)], (230, 240, 255), 4)
+            spider(P, 850, CENTER - 120 + math.sin(t * 2) * 30, .55 * k(1.6), t)
+        P.text(230, CENTER + 90, "webs", 46, CLOUD); P.text(540, CENTER + 90, "egg sacs", 46, CLOUD); P.text(850, CENTER + 90, "safety line", 46, CLOUD)
+        P.text(540, CENTER + 400, "up to 7 kinds", 72, GLIM)
+    else:
+        P.rrect(150, CENTER + 120, 500, CENTER + 200, 14, (170, 180, 195), outline=(110, 120, 140), w=5)
+        P.text(325, CENTER + 260, "steel", 52, CLOUD)
+        P.line([(600, CENTER + 160), (950, CENTER + 160)], (230, 240, 255), 6, glow=dk((200, 220, 255), 160))
+        P.text(775, CENTER + 260, "silk", 52, CLOUD)
+        P.text(540, CENTER - 20, ">", 140 * back(seg(u, .5, 1)), GLIM)
+        web(P, 540, CENTER - 230, 130, 1, w=3)
+        P.text(540, CENTER - 450, "stronger by weight!", 66, GLIM)
+
 SCENES = {"cats": sc_cats, "bees": sc_bees, "beavers": sc_beavers, "flamingos": sc_flamingos, "turtles": sc_turtles,
-          "octopuses": sc_octopuses, "whales": sc_whales, "migration": sc_migration, "zebras": sc_zebras, "fireflies": sc_fireflies}[TOPIC]
+          "octopuses": sc_octopuses, "whales": sc_whales, "migration": sc_migration, "zebras": sc_zebras, "fireflies": sc_fireflies,
+          "chameleons": sc_chameleons, "elephants": sc_elephants, "spiders": sc_spiders}[TOPIC]
 PAL = {"cats": ((40, 30, 70), (110, 70, 120)), "bees": ((60, 40, 20), (160, 110, 40)), "beavers": ((20, 50, 60), (60, 130, 110)),
        "flamingos": ((60, 25, 60), (200, 110, 120)), "turtles": ((10, 40, 70), (40, 120, 150)),
        "octopuses": ((10, 35, 70), (40, 110, 140)), "whales": ((10, 30, 70), (30, 80, 150)), "migration": ((40, 90, 160), (150, 190, 230)),
-       "zebras": ((90, 150, 190), (230, 200, 130)), "fireflies": ((10, 20, 50), (20, 50, 60))}[TOPIC]
+       "zebras": ((90, 150, 190), (230, 200, 130)), "fireflies": ((10, 20, 50), (20, 50, 60)),
+       "chameleons": ((20, 60, 50), (120, 170, 90)), "elephants": ((150, 110, 70), (240, 190, 120)), "spiders": ((15, 15, 40), (50, 40, 80))}[TOPIC]
 HI = {"cats": {"purr?", "voice", "box,", "twenty", "thirty", "pad", "deep", "kittens", "days", "calm"},
       "bees": {"honey?", "nectar", "stomach.", "enzymes", "sugars.", "fan", "wings", "thick", "sweet.", "wax", "winter.", "twelfth", "teaspoon"},
       "beavers": {"dams?", "deep", "safe", "wolves", "bears.", "branches,", "mud", "stones", "underwater", "door", "frogs,", "fish,", "birds", "dragonflies.", "ecosystem", "engineers!"},
@@ -883,7 +1104,10 @@ HI = {"cats": {"purr?", "voice", "box,", "twenty", "thirty", "pad", "deep", "kit
       "whales": {"sing?", "males", "twenty", "minutes,", "attract", "females,", "rival", "far", "underwater,", "kilometers.", "same", "song,", "changes", "ocean,", "pop", "hits!"},
       "migration": {"migrate?", "born", "genes.", "sun,", "stars", "north", "star.", "magnetic", "field,", "eyes.", "rivers,", "coastlines,", "smells", "seventy", "thousand"},
       "zebras": {"stripes?", "decades.", "horseflies", "disease.", "landed", "ease.", "failed", "slow", "missed", "confuse", "striped", "coats", "fewer"},
-      "fireflies": {"glow?", "bodies.", "luciferin,", "luciferase.", "oxygen", "light.", "cold", "heat.", "pattern", "partner.", "switch", "oxygen!"}}[TOPIC]
+      "fireflies": {"glow?", "bodies.", "luciferin,", "luciferase.", "oxygen", "light.", "cold", "heat.", "pattern", "partner.", "switch", "oxygen!"},
+      "chameleons": {"fast?", "folded", "bone,", "bow.", "muscle", "elastic", "spring.", "shoots", "twice", "sticky,", "mucus", "sixty", "hundredth"},
+      "elephants": {"ears?", "hot", "sweat", "blood", "vessels,", "flapping", "cools", "sounds,", "bigger", "threatened.", "rumbles", "kilometers"},
+      "spiders": {"silk?", "glands,", "liquid", "protein.", "spinnerets,", "nozzles", "pulls,", "line", "solid", "thread.", "seven", "stronger", "steel!"}}[TOPIC]
 
 def kinetic(d, t, line, y, size):
     words = line["text"].split(); n = len(words); a0 = line["start"]; span = line["dur"] * .85
