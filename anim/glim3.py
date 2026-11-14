@@ -1,6 +1,6 @@
 """Glim explains v3.1 – Themen-Renderer (Natur & Tiere). Aufruf:
 FPS=60 STYLE=classic python3 glim3.py <topic> <tl.json> <frames_dir> [offset step]
-Themen: cats, bees, beavers, flamingos, turtles, octopuses, whales, migration. Neue Themen: Szenenfunktion sc_<thema> + SCENES/PAL/HI.
+Themen: cats, bees, beavers, flamingos, turtles, octopuses, whales, migration, zebras, fireflies. Neue Themen: Szenenfunktion sc_<thema> + SCENES/PAL/HI.
 v3.1 (Nachtlauf 14./15.11.): FPS per Umgebungsvariable (Standard 60), STYLE = classic | paper | night | sunny,
 Glim mit weichem Blinzeln, Atmen, Blickrichtung und Funkeln beim Jubeln; weiche (geglättete) Weißblitz-Übergänge.
 Testframe-Nummern beziehen sich auf FPS (bei 60 fps: Sekunde x 60)."""
@@ -688,11 +688,192 @@ def sc_migration(i, P, t, u):
         if pts: flybird(P, pts[-1][0], pts[-1][1], .5, t, flip=1)
         P.text(540, CENTER + 470, "70,000 km a year!", 72, GLIM)
 
+# ---------- Zebras & Glühwürmchen (Nachtlauf 14./15.11., Lauf B 21:35) ----------
+def dk(c, k): return tuple(int(clamp(v * k / 255, 0, 255)) for v in c)   # echtes Abdunkeln (k/255), mul() sättigt bei k>1
+def equine(P, x, y, s, t, stripes=True, col=(250, 250, 250), coat=False, flip=1, run=0.):
+    f = flip; blk = (30, 30, 36); body = col; mane = blk if stripes and not coat else dk(col, 140)
+    sw = math.sin(t * (9 if run else 2)) * (22 if run else 4)
+    for k, lx in enumerate((-120, -70, 90, 140)):          # Beine
+        a = sw * (1 if k % 2 else -1) * s
+        P.line([(x + f * lx * s, y + 40 * s), (x + f * lx * s + a, y + 230 * s)], body, 34 * s)
+        if stripes and not coat:
+            for j in range(3): P.line([(x + f * lx * s + a * (.3 + j * .25) - 17 * s, y + (95 + j * 45) * s), (x + f * lx * s + a * (.3 + j * .25) + 17 * s, y + (95 + j * 45) * s)], blk, 12 * s)
+        P.rrect(x + f * lx * s + a - 19 * s, y + 222 * s, x + f * lx * s + a + 19 * s, y + 245 * s, 6 * s, blk)
+    tw = math.sin(t * 3) * 20 * s                            # Schwanz
+    P.line([(x + f * 175 * s, y - 40 * s), (x + f * 230 * s, y + 40 * s + tw), (x + f * 225 * s, y + 110 * s + tw)], body, 12 * s)
+    P.ell(x + f * 225 * s, y + 120 * s + tw, 14 * s, 26 * s, blk)
+    P.ell(x, y, 190 * s, 95 * s, body)
+    if stripes:
+        cx = x - (20 if coat else 0) * f * s; rx = (150 if coat else 185) * s
+        if coat: P.ell(cx, y - 5 * s, rx, 88 * s, (250, 250, 250))
+        for k in range(-6, 7):
+            dx = k * 30 * s
+            if abs(dx) > rx - 8 * s: continue
+            hh = 95 * s * math.sqrt(max(0, 1 - (dx / (190 * s)) ** 2))
+            w_ = 5 * s + 2 * s * (k % 2)
+            P.poly([(cx + dx - w_, y - hh + 2 * s), (cx + dx + w_ + 6 * s, y - hh + 2 * s), (cx + dx + w_ - 4 * s, y + hh * .75), (cx + dx - w_ - 8 * s, y + hh * .75)], blk)
+    if coat: P.line([(x - f * 170 * s, y - 60 * s), (x - f * 170 * s, y + 60 * s)], (200, 60, 60), 10 * s); P.line([(x + f * 135 * s, y - 75 * s), (x + f * 135 * s, y + 70 * s)], (200, 60, 60), 10 * s)
+    nod = math.sin(t * 1.5) * 8 * s
+    P.poly([(x - f * 120 * s, y - 60 * s), (x - f * 175 * s, y - 190 * s + nod), (x - f * 235 * s, y - 170 * s + nod), (x - f * 175 * s, y + 10 * s)], body)
+    for k in range(5):
+        P.circ(x - f * (135 + k * 20) * s, y - (85 + k * 26) * s + nod * k / 5, 16 * s, mane)
+    if stripes and not coat:
+        for k in range(4): P.line([(x - f * (130 + k * 22) * s, y - (40 + k * 30) * s), (x - f * (185 + k * 22) * s, y - (20 + k * 30) * s)], blk, 11 * s)
+    hx, hy = x - f * 245 * s, y - 165 * s + nod
+    P.ell(hx, hy, 70 * s, 42 * s, body)
+    P.ell(hx - f * 52 * s, hy + 10 * s, 26 * s, 24 * s, (60, 60, 66) if stripes and not coat else dk(col, 150))
+    P.poly([(hx + f * 25 * s, hy - 30 * s), (hx + f * 15 * s, hy - 85 * s), (hx + f * 45 * s, hy - 40 * s)], body, outline=dk(col, 150), w=3)
+    P.circ(hx - f * 5 * s, hy - 12 * s, 9 * s, NIGHT); P.circ(hx - f * 8 * s, hy - 15 * s, 3 * s, (255, 255, 255))
+    if stripes and not coat:
+        for k in range(3): P.line([(hx + f * (5 + k * 18) * s, hy - 38 * s), (hx + f * (12 + k * 18) * s, hy + 34 * s)], blk, 7 * s)
+
+def horsefly(P, x, y, s, t, ang=0.):
+    fl = abs(math.sin(t * 40))
+    for side in (-1, 1):
+        P.ell(x + side * 26 * s, y - 22 * s - fl * 10 * s, 30 * s, 14 * s, (220, 235, 250), outline=(150, 170, 200), w=2)
+    P.ell(x + 18 * s, y, 34 * s, 17 * s, (110, 95, 80))
+    for k in range(3): P.line([(x + (8 + k * 12) * s, y - 15 * s), (x + (8 + k * 12) * s, y + 15 * s)], (70, 60, 50), 3 * s)
+    P.circ(x - 18 * s, y, 18 * s, (80, 70, 60)); P.circ(x - 26 * s, y - 5 * s, 12 * s, (60, 190, 110))
+
+def firefly(P, x, y, s, t, glow=1., col=(255, 235, 110), ang=0.):
+    fl = math.sin(t * 30)
+    for side in (-1, 1):
+        P.ell(x + side * 30 * s, y - 25 * s - fl * 8 * s, 34 * s, 16 * s, (180, 200, 230), outline=(120, 140, 180), w=2)
+    if glow > .02:
+        P.ell(x + 46 * s, y + 2 * s, 30 * s, 24 * s, lc((90, 90, 50), col, glow), glow=dk(col, 150 * glow))
+    else: P.ell(x + 46 * s, y + 2 * s, 30 * s, 24 * s, (90, 90, 50))
+    P.ell(x + 8 * s, y, 32 * s, 20 * s, (70, 50, 40))
+    P.circ(x - 26 * s, y, 18 * s, (220, 80, 60)); P.circ(x - 36 * s, y - 4 * s, 7 * s, NIGHT)
+    P.line([(x - 34 * s, y - 14 * s), (x - 55 * s, y - 45 * s)], (60, 40, 30), 4 * s)
+    P.line([(x - 30 * s, y - 16 * s), (x - 42 * s, y - 52 * s)], (60, 40, 30), 4 * s)
+
+def sc_zebras(i, P, t, u):
+    G = lambda: P.ell(540, CENTER + 330, 520, 70, (150, 200, 110))
+    if i == 0:
+        G(); equine(P, 560, CENTER + 60, 1.25, t)
+        k = back(seg(u, .5, 1.0))
+        if k > 0: P.text(820, CENTER - 300, "?", 180 * k, GLIM)
+    elif i == 1:
+        G(); equine(P, 320, CENTER + 120, .7, t, stripes=False, col=(170, 110, 70)); equine(P, 780, CENTER + 120, .7, t)
+        for k in range(7):
+            a = t * (2 + k * .3) + k
+            horsefly(P, 540 + math.cos(a) * (180 + k * 30), CENTER - 120 + math.sin(a * 1.3) * 130, .9, t + k)
+        P.text(540, CENTER + 480, "horseflies", 72, GLIM)
+    elif i == 2:
+        G(); equine(P, 560, CENTER + 120, 1.0, t, stripes=False, col=(170, 110, 70))
+        q = eout(seg(u, .2, 2.2))                           # sanftes Abbremsen
+        fx, fy = lerp(-60, 560, q), lerp(CENTER - 500, CENTER + 25, q)
+        horsefly(P, fx, fy, 1.1, t)
+        if q > .97:
+            k = back(seg(u, 2.2, 2.6)); P.text(540, CENTER + 480, "smooth landing", 66 * k, HOPE)
+    elif i == 3:
+        G(); equine(P, 560, CENTER + 120, 1.0, t)
+        q = seg(u, .2, 1.6); q2 = seg(u, 1.6, 3.0)
+        if q < 1: fx, fy = lerp(-60, 600, q), lerp(CENTER - 500, CENTER + 10, q)
+        else: fx, fy = 600 + 500 * eout(q2), CENTER + 10 - 400 * eout(q2) + math.sin(q2 * 20) * 30
+        horsefly(P, fx, fy, 1.1, t)
+        if q >= 1:
+            k = back(seg(u, 1.6, 2.0)); P.text(540, CENTER + 480, "missed!", 84 * k, HOOK)
+            for m in range(6): P.twinkle(600 + math.cos(m) * 60 * k, CENTER + 10 + math.sin(m) * 60 * k, 16 * (1 - q2), GLIM)
+    elif i == 4:
+        P.rrect(140, CENTER - 420, 940, CENTER + 380, 60, (250, 250, 250))
+        for k in range(-6, 12):
+            x0 = 140 + k * 110 + math.sin(t) * 10
+            pts = [(clamp(x0 + j * 40 + math.sin(j * .9 + t * 1.5) * 40, 160, 920), CENTER - 400 + j * 78) for j in range(11)]
+            P.line(pts, (30, 30, 36), 46)
+        P.rrect(140, CENTER - 420, 940, CENTER + 380, 60, None, outline=(230, 220, 200), w=10)
+        for k in range(3):
+            a = t * 5 + k * 2.1; r_ = 120 + 60 * math.sin(t * 3 + k)
+            horsefly(P, 540 + math.cos(a) * r_, CENTER - 20 + math.sin(a) * r_, 1.2, t + k)
+            P.text(540 + math.cos(a) * r_ + 50, CENTER - 80 + math.sin(a) * r_, "?", 60, GLIM)
+        P.text(540, CENTER + 480, "confusing up close", 62, CLOUD)
+    else:
+        G(); equine(P, 560, CENTER + 120, 1.0, t, stripes=True, col=(170, 110, 70), coat=True)
+        for k in range(4):
+            q = (u * .7 + k / 4) % 1; a = -1.2 + k * .8
+            horsefly(P, 560 + math.cos(a) * (150 + q * 450), CENTER - 60 + math.sin(a) * (120 + q * 350), .9, t + k)
+        k = back(seg(u, .4, .9))
+        if k > 0: P.text(540, CENTER - 430, "striped coats work!", 62 * k, HOOK)
+
+def sc_fireflies(i, P, t, u):
+    def grass(n=26):
+        for k in range(n):
+            x = k * 44 + 10; h = 140 + (k * 37) % 90; sw = math.sin(t * 1.2 + k) * 14
+            P.poly([(x - 10, CENTER + 520), (x + 10, CENTER + 520), (x + sw, CENTER + 520 - h)], lc((20, 60, 45), (40, 100, 60), (k % 3) / 2))
+    def swarm(n=12, seed=5):
+        random.seed(seed)
+        for k in range(n):
+            x0, y0, ph = random.random() * 1000 + 40, CENTER - 450 + random.random() * 900, random.random() * 6
+            on = max(0, math.sin(t * 2.4 + ph)) ** 3
+            x, y = x0 + math.sin(t * .6 + ph) * 40, y0 + math.cos(t * .5 + ph) * 30
+            P.circ(x, y, 8 + 10 * on, lc((60, 60, 40), (255, 240, 120), on), glow=dk((255, 230, 90), 230 * on))
+    if i == 0:
+        swarm(); grass()
+        on = .5 + .5 * math.sin(t * 2.5)
+        firefly(P, 540, CENTER - 20, 3.2 * back(seg(u, 0, .5)), t, glow=on)
+    elif i == 1:
+        P.circ(540, CENTER, 360, (60, 55, 30), outline=GLIM, w=8)
+        k1, k2 = back(seg(u, .4, .9)), back(seg(u, 2.0, 2.5))
+        random.seed(2)
+        for m in range(8):
+            a = m / 8 * 6.28 + t * .3; x, y = 540 + math.cos(a) * 200, CENTER - 40 + math.sin(a) * 160
+            if k1 > 0:
+                P.poly([(x + math.cos(j * 1.047) * 34 * k1, y + math.sin(j * 1.047) * 34 * k1) for j in range(6)], (255, 220, 90), outline=(200, 150, 30), w=3)
+        for m in range(3):
+            a = m / 3 * 6.28 - t * .4; x, y = 540 + math.cos(a) * 90, CENTER - 40 + math.sin(a) * 70
+            if k2 > 0: P.ell(x, y, 54 * k2, 40 * k2, HOPE, outline=(20, 120, 70), w=4); P.circ(x + 30 * k2, y - 5 * k2, 14 * k2, (60, 55, 30))
+        if k1 > 0: P.text(540, CENTER - 450, "luciferin", 66 * k1, GLIM)
+        if k2 > 0: P.text(540, CENTER + 450, "luciferase", 66 * k2, HOPE)
+    elif i == 2:
+        P.circ(540, CENTER, 300, (60, 55, 30), outline=GLIM, w=8)
+        for m in range(8):
+            q = (u * .6 + m / 8) % 1; a = m * .785
+            x, y = 540 + math.cos(a) * (700 - 450 * q), CENTER + math.sin(a) * (700 - 450 * q)
+            P.circ(x, y, 34, (120, 190, 255), outline=CLOUD, w=3); P.text(x, y, "O₂", 30, CLOUD)
+        fl = eout(seg(u, .8, 2.2)); pul = .8 + .2 * math.sin(t * 6)
+        P.circ(540, CENTER, 260 * fl * pul + 1, lc((60, 55, 30), (255, 238, 130), fl), glow=dk((255, 230, 100), 110 * fl))
+        if fl > .3: P.text(540, CENTER + 450, "light!", 84 * back(seg(u, 1.2, 1.6)), GLIM)
+    elif i == 3:
+        P.circ(300, CENTER - 100, 130, (255, 220, 160), glow=(120, 50, 40)); P.rrect(250, CENTER + 20, 350, CENTER + 120, 14, (150, 150, 160))
+        for k in range(3):
+            q = (t * .8 + k / 3) % 1; x = 240 + k * 60
+            P.line([(x, CENTER - 260 - q * 160), (x + 20 * math.sin(q * 9), CENTER - 300 - q * 160)], lc(HOOK, NIGHT, q), 12)
+        P.text(300, CENTER + 230, "hot", 64, HOOK)
+        firefly(P, 760, CENTER - 100, 2.2, t, glow=.8 + .2 * math.sin(t * 3))
+        P.rrect(735, CENTER + 60, 785, CENTER + 300, 25, CLOUD); P.circ(760, CENTER + 310, 40, (120, 190, 255))
+        P.rrect(748, CENTER + 230 - 30 * eio(seg(u, .3, 1.5)), 772, CENTER + 310, 12, (120, 190, 255))
+        P.text(760, CENTER + 420, "cool", 64, (150, 210, 255))
+        k = back(seg(u, 1.0, 1.4))
+        if k > 0: P.text(540, CENTER - 460, "cold light", 84 * k, GLIM)
+    elif i == 4:
+        pats = [(1, 0, 1, 0, 0, 0), (1, 1, 1, 0, 0, 0), (1, 0, 0, 1, 0, 0)]
+        for r_, pat in enumerate(pats):
+            y = CENTER - 320 + r_ * 300; c = [(255, 235, 110), (170, 255, 120), (255, 190, 90)][r_]
+            step = int(t * 4) % len(pat); on = pat[step]
+            firefly(P, 200, y, 1.8, t + r_, glow=on, col=c)
+            for j, v in enumerate(pat):
+                x = 420 + j * 95; act = j == step
+                if v: P.circ(x, y, 26 + (8 if act else 0), c if act else dk(c, 120), glow=dk(c, 200) if act else None)
+                else: P.circ(x, y, 10, (70, 70, 90))
+        P.text(540, CENTER + 480, "secret flash codes", 62, GLIM)
+    else:
+        swarm(8, 9); grass()
+        on = 1 if (t * 1.2) % 1 < .5 else 0
+        firefly(P, 470, CENTER - 60, 2.3, t, glow=on)
+        for m in range(4):
+            q = (u * .8 + m / 4) % 1
+            if on: P.circ(700 + q * 200, CENTER - 140 + math.sin(m * 2) * 80 * q, 20, (120, 190, 255))
+        P.rrect(720, CENTER + 130, 900, CENTER + 230, 50, HOPE if on else (90, 90, 110))
+        P.circ(850 if on else 770, CENTER + 180, 40, CLOUD)
+        P.text(810, CENTER + 300, "ON" if on else "OFF", 56, CLOUD)
+        P.text(540, CENTER - 430, "oxygen = switch", 62, GLIM)
+
 SCENES = {"cats": sc_cats, "bees": sc_bees, "beavers": sc_beavers, "flamingos": sc_flamingos, "turtles": sc_turtles,
-          "octopuses": sc_octopuses, "whales": sc_whales, "migration": sc_migration}[TOPIC]
+          "octopuses": sc_octopuses, "whales": sc_whales, "migration": sc_migration, "zebras": sc_zebras, "fireflies": sc_fireflies}[TOPIC]
 PAL = {"cats": ((40, 30, 70), (110, 70, 120)), "bees": ((60, 40, 20), (160, 110, 40)), "beavers": ((20, 50, 60), (60, 130, 110)),
        "flamingos": ((60, 25, 60), (200, 110, 120)), "turtles": ((10, 40, 70), (40, 120, 150)),
-       "octopuses": ((10, 35, 70), (40, 110, 140)), "whales": ((10, 30, 70), (30, 80, 150)), "migration": ((40, 90, 160), (150, 190, 230))}[TOPIC]
+       "octopuses": ((10, 35, 70), (40, 110, 140)), "whales": ((10, 30, 70), (30, 80, 150)), "migration": ((40, 90, 160), (150, 190, 230)),
+       "zebras": ((90, 150, 190), (230, 200, 130)), "fireflies": ((10, 20, 50), (20, 50, 60))}[TOPIC]
 HI = {"cats": {"purr?", "voice", "box,", "twenty", "thirty", "pad", "deep", "kittens", "days", "calm"},
       "bees": {"honey?", "nectar", "stomach.", "enzymes", "sugars.", "fan", "wings", "thick", "sweet.", "wax", "winter.", "twelfth", "teaspoon"},
       "beavers": {"dams?", "deep", "safe", "wolves", "bears.", "branches,", "mud", "stones", "underwater", "door", "frogs,", "fish,", "birds", "dragonflies.", "ecosystem", "engineers!"},
@@ -700,7 +881,9 @@ HI = {"cats": {"purr?", "voice", "box,", "twenty", "thirty", "pad", "deep", "kit
       "turtles": {"home?", "oceans", "decades", "same", "magnetic", "signature,", "invisible", "address.", "map.", "gps,", "nature!"},
       "octopuses": {"color", "blink?", "chromatophores.", "pigment,", "muscles.", "brain", "open,", "ink.", "reflect", "light,", "sense", "light"},
       "whales": {"sing?", "males", "twenty", "minutes,", "attract", "females,", "rival", "far", "underwater,", "kilometers.", "same", "song,", "changes", "ocean,", "pop", "hits!"},
-      "migration": {"migrate?", "born", "genes.", "sun,", "stars", "north", "star.", "magnetic", "field,", "eyes.", "rivers,", "coastlines,", "smells", "seventy", "thousand"}}[TOPIC]
+      "migration": {"migrate?", "born", "genes.", "sun,", "stars", "north", "star.", "magnetic", "field,", "eyes.", "rivers,", "coastlines,", "smells", "seventy", "thousand"},
+      "zebras": {"stripes?", "decades.", "horseflies", "disease.", "landed", "ease.", "failed", "slow", "missed", "confuse", "striped", "coats", "fewer"},
+      "fireflies": {"glow?", "bodies.", "luciferin,", "luciferase.", "oxygen", "light.", "cold", "heat.", "pattern", "partner.", "switch", "oxygen!"}}[TOPIC]
 
 def kinetic(d, t, line, y, size):
     words = line["text"].split(); n = len(words); a0 = line["start"]; span = line["dur"] * .85
