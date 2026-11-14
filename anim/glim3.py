@@ -1,6 +1,6 @@
 """Glim explains v3.1 – Themen-Renderer (Natur & Tiere). Aufruf:
 FPS=60 STYLE=classic python3 glim3.py <topic> <tl.json> <frames_dir> [offset step]
-Themen: cats, bees, beavers, flamingos, turtles, octopuses, whales, migration, zebras, fireflies. Neue Themen: Szenenfunktion sc_<thema> + SCENES/PAL/HI.
+Themen: cats, bees, beavers, flamingos, turtles, octopuses, whales, migration, zebras, fireflies, chameleons, elephants, spiders, dogs, penguins. Neue Themen: Szenenfunktion sc_<thema> + SCENES/PAL/HI.
 v3.1 (Nachtlauf 14./15.11.): FPS per Umgebungsvariable (Standard 60), STYLE = classic | paper | night | sunny,
 Glim mit weichem Blinzeln, Atmen, Blickrichtung und Funkeln beim Jubeln; weiche (geglättete) Weißblitz-Übergänge.
 Testframe-Nummern beziehen sich auf FPS (bei 60 fps: Sekunde x 60)."""
@@ -1087,14 +1087,135 @@ def sc_spiders(i, P, t, u):
         web(P, 540, CENTER - 230, 130, 1, w=3)
         P.text(540, CENTER - 450, "stronger by weight!", 66, GLIM)
 
+# ---------- Hunde & Pinguine (Nachtlauf 14./15.11., Lauf B 21:50) ----------
+def dog(P, x, y, s, t, col=(205, 150, 95), wag=1., side=0., flip=1, ear=(150, 95, 55)):
+    f = flip; dark = dk(col, 170)
+    a = math.radians(-60 + side * 35 + math.sin(t * 14) * 28 * wag)       # side>0: mehr nach rechts (aus Hundesicht)
+    tx, ty = x + f * 150 * s, y - 30 * s
+    P.line([(tx, ty), (tx + f * math.cos(a) * 120 * s, ty + math.sin(a) * 120 * s)], col, 24 * s)
+    for lx in (-110, -60, 80, 125):
+        P.line([(x + f * lx * s, y + 20 * s), (x + f * lx * s, y + 150 * s)], col, 30 * s)
+        P.ell(x + f * lx * s - f * 6 * s, y + 152 * s, 22 * s, 12 * s, dark)
+    P.ell(x, y, 170 * s, 80 * s, col)
+    P.ell(x - f * 30 * s, y + 20 * s, 110 * s, 45 * s, lc(col, CLOUD, .4))
+    hx, hy = x - f * 175 * s, y - 95 * s + math.sin(t * 2) * 4 * s
+    P.ell(hx + f * 40 * s, hy + 50 * s, 55 * s, 60 * s, col)
+    P.circ(hx, hy, 70 * s, col)
+    P.ell(hx - f * 70 * s, hy + 25 * s, 50 * s, 32 * s, lc(col, CLOUD, .4))
+    P.circ(hx - f * 112 * s, hy + 12 * s, 14 * s, NIGHT)
+    P.ell(hx + f * 30 * s, hy + 10 * s, 26 * s, 60 * s, ear)
+    P.circ(hx - f * 22 * s, hy - 15 * s, 10 * s, NIGHT); P.circ(hx - f * 25 * s, hy - 18 * s, 3.5 * s, (255, 255, 255))
+    P.arc(hx - f * 75 * s, hy + 38 * s, 20 * s, 20, 160, NIGHT, 4 * s)
+
+def penguin(P, x, y, s, t, egg=False, bob=0.):
+    b = math.sin(t * 2 + bob) * 5 * s
+    P.ell(x, y + b, 80 * s, 140 * s, (30, 34, 48))
+    P.ell(x, y + 20 * s + b, 58 * s, 112 * s, (248, 246, 240))
+    P.ell(x, y - 70 * s + b, 46 * s, 30 * s, (255, 220, 120))
+    P.circ(x, y - 125 * s + b, 52 * s, (30, 34, 48))
+    for ex in (-30, 30): P.ell(x + ex * s, y - 105 * s + b, 14 * s, 22 * s, (255, 200, 80))
+    for ex in (-18, 18): P.circ(x + ex * s, y - 132 * s + b, 7 * s, (250, 250, 250)); P.circ(x + ex * s, y - 132 * s + b, 4 * s, NIGHT)
+    P.poly([(x - 8 * s, y - 115 * s + b), (x + 8 * s, y - 115 * s + b), (x, y - 90 * s + b)], (240, 130, 60))
+    for side in (-1, 1): P.ell(x + side * 78 * s, y + 10 * s + b, 18 * s, 75 * s, (30, 34, 48))
+    for side in (-1, 1): P.ell(x + side * 28 * s, y + 140 * s, 28 * s, 10 * s, (240, 130, 60))
+    if egg: P.ell(x, y + 128 * s, 26 * s, 20 * s, (245, 240, 225), outline=(200, 190, 170), w=3)
+
+def sc_dogs(i, P, t, u):
+    FLOOR = lambda: P.ell(540, CENTER + 300, 500, 60, dk(PAL[1], 200))
+    if i == 0:
+        FLOOR(); dog(P, 560, CENTER + 80, 1.35, t)
+        k = back(seg(u, .5, 1.0))
+        if k > 0: P.text(780, CENTER - 300, "?", 180 * k, GLIM)
+    elif i == 1:
+        FLOOR(); dog(P, 600, CENTER + 120, 1.0, t)
+        k = back(seg(u, .3, .8))
+        if k > 0:
+            P.rrect(140, CENTER - 420, 640, CENTER - 230, 50, CLOUD, outline=dk(CLOUD, 180), w=6)
+            P.poly([(520, CENTER - 240), (600, CENTER - 240), (650, CENTER - 140)], CLOUD)
+            P.text(390, CENTER - 325, "message!", 64 * k, HOOK)
+        P.text(540, CENTER + 470, "body language", 66, GLIM)
+    elif i == 2:
+        FLOOR(); dog(P, 400, CENTER + 120, 1.0, t, side=1.2, flip=1)
+        k = back(seg(u, .4, .9))
+        if k > 0:
+            P.circ(860, CENTER - 40, 70 * k, (250, 210, 170)); P.rrect(790, CENTER + 30, 930, CENTER + 290, 40, HOPE)
+            P.heart(700, CENTER - 200 - math.sin(t * 3) * 20, 34 * k, HOOK)
+        P.text(540, CENTER + 470, "owner = RIGHT", 70, HOPE)
+    elif i == 3:
+        FLOOR(); dog(P, 330, CENTER + 120, .9, t, side=-1.2, flip=1, wag=.6)
+        k = back(seg(u, .3, .8))
+        if k > 0: dog(P, 830, CENTER + 90, 1.05 * k, t, col=(90, 80, 80), wag=.2, flip=-1, ear=(50, 45, 45))
+        P.text(540, CENTER + 470, "stranger = LEFT", 70, HOOK)
+    elif i == 4:
+        FLOOR()
+        dog(P, 300, CENTER - 160, .75, t, side=1.2, flip=-1); dog(P, 300, CENTER + 200, .75, t + 1, side=-1.2, flip=-1)
+        dog(P, 800, CENTER - 160, .75, t + 2, wag=.3, col=(170, 170, 180), ear=(120, 120, 130)); dog(P, 800, CENTER + 200, .75, t + 3, wag=.3, col=(170, 170, 180), ear=(120, 120, 130))
+        P.text(560, CENTER - 330, "calm", 56, HOPE); P.text(560, CENTER + 30, "tense", 56, HOOK)
+    else:
+        FLOOR(); dog(P, 470, CENTER + 120, 1.15, t, side=.8, wag=1.4)
+        for k in range(3):
+            q = (u * .6 + k / 3) % 1
+            P.text(720 + k * 50, CENTER - 120 - q * 260, "wag", 44 + 10 * k, lc(GLIM, PAL[0], q * q))
+        P.text(540, CENTER - 430, "a wag = a conversation", 58, HOOK)
+
+def sc_penguins(i, P, t, u):
+    ICE = lambda: P.ell(540, CENTER + 360, 560, 120, (225, 240, 252))
+    def snow(n=50, wind=1.):
+        random.seed(4)
+        for k in range(n):
+            x0, y0, sp = random.random() * W, random.random() * H, .5 + random.random()
+            P.circ((x0 + t * 260 * wind * sp) % (W + 100) - 50, (y0 + t * 90 * sp) % H, 5 + 4 * sp, (240, 248, 255))
+    if i == 0:
+        ICE()
+        for k in range(5): penguin(P, 300 + k * 120, CENTER + 120 - (k % 2) * 60, .75, t, bob=k)
+        snow(30, .4)
+    elif i == 1:
+        ICE(); penguin(P, 460, CENTER + 130, 1.1, t)
+        for k in range(6):
+            q = (t * 1.3 + k / 6) % 1; y = CENTER - 300 + k * 90
+            P.line([(lerp(-100, 1180, q), y), (lerp(-100, 1180, q) + 160, y)], (220, 235, 255), 8)
+        snow(60, 1.6)
+        P.rrect(760, CENTER - 300, 800, CENTER + 60, 20, CLOUD); P.circ(780, CENTER + 70, 36, (120, 190, 255))
+        P.rrect(768, CENTER - 100 + 140 * eio(seg(u, .2, 1.5)), 792, CENTER + 70, 12, (120, 190, 255))
+        P.text(780, CENTER + 170, "-40°C", 72, (150, 210, 255))
+    elif i == 2:
+        ICE(); penguin(P, 540, CENTER + 60, 1.6, t, egg=True)
+        k = back(seg(u, .6, 1.1))
+        if k > 0: P.text(540, CENTER + 470, "an egg on his feet", 62 * k, GLIM)
+    elif i == 3:
+        ICE()
+        heat = eio(seg(u, .3, 2.5))
+        P.circ(540, CENTER + 60, 300 * heat + 1, lc((225, 240, 252), (255, 190, 120), heat * .6))
+        pts = [(540 + math.cos(k / n * 6.28 + .3) * r_, CENTER + 40 + math.sin(k / n * 6.28 + .3) * r_ * .45, k + r_) for r_, n in ((0, 1), (130, 7), (250, 12)) for k in range(n)]
+        for x, y, bb in sorted(pts, key=lambda p_: p_[1]): penguin(P, x, y, .55, t, bob=bb)
+        k = back(seg(u, .8, 1.3))
+        if k > 0: P.text(540, CENTER - 360, "20°C+ inside!", 76 * k, HOOK)
+    elif i == 4:
+        ICE()
+        pts = [(540 + math.cos(k / 14 * 6.28 + u * .25) * 280, CENTER + 60 + math.sin(k / 14 * 6.28 + u * .25) * 140, k, .5) for k in range(14)]
+        pts += [(470 + k * 35, CENTER + 50 + (k % 2) * 20, k, .45) for k in range(5)]
+        for x, y, bb, sc in sorted(pts, key=lambda p_: p_[1]): penguin(P, x, y, sc, t, bob=bb)
+        for k in range(3):
+            a = u * .25 + k * 2.1
+            P.arc(540, CENTER + 60, 360, math.degrees(a), math.degrees(a) + 40, GLIM, 10)
+        P.text(540, CENTER + 470, "take turns at the edge", 60, GLIM)
+    else:
+        ICE()
+        for k in range(30):
+            row, col_ = k // 6, k % 6
+            wv = math.sin(t * 2 - col_ * .6) * 12
+            penguin(P, 260 + col_ * 110 + row * 20 + wv, CENTER - 140 + row * 90, .42, t, bob=k)
+        P.text(540, CENTER - 300, "one slow wave", 66, GLIM)
+
 SCENES = {"cats": sc_cats, "bees": sc_bees, "beavers": sc_beavers, "flamingos": sc_flamingos, "turtles": sc_turtles,
           "octopuses": sc_octopuses, "whales": sc_whales, "migration": sc_migration, "zebras": sc_zebras, "fireflies": sc_fireflies,
-          "chameleons": sc_chameleons, "elephants": sc_elephants, "spiders": sc_spiders}[TOPIC]
+          "chameleons": sc_chameleons, "elephants": sc_elephants, "spiders": sc_spiders, "dogs": sc_dogs, "penguins": sc_penguins}[TOPIC]
 PAL = {"cats": ((40, 30, 70), (110, 70, 120)), "bees": ((60, 40, 20), (160, 110, 40)), "beavers": ((20, 50, 60), (60, 130, 110)),
        "flamingos": ((60, 25, 60), (200, 110, 120)), "turtles": ((10, 40, 70), (40, 120, 150)),
        "octopuses": ((10, 35, 70), (40, 110, 140)), "whales": ((10, 30, 70), (30, 80, 150)), "migration": ((40, 90, 160), (150, 190, 230)),
        "zebras": ((90, 150, 190), (230, 200, 130)), "fireflies": ((10, 20, 50), (20, 50, 60)),
-       "chameleons": ((20, 60, 50), (120, 170, 90)), "elephants": ((150, 110, 70), (240, 190, 120)), "spiders": ((15, 15, 40), (50, 40, 80))}[TOPIC]
+       "chameleons": ((20, 60, 50), (120, 170, 90)), "elephants": ((150, 110, 70), (240, 190, 120)), "spiders": ((15, 15, 40), (50, 40, 80)),
+       "dogs": ((120, 80, 70), (230, 170, 120)), "penguins": ((30, 60, 110), (150, 190, 230))}[TOPIC]
 HI = {"cats": {"purr?", "voice", "box,", "twenty", "thirty", "pad", "deep", "kittens", "days", "calm"},
       "bees": {"honey?", "nectar", "stomach.", "enzymes", "sugars.", "fan", "wings", "thick", "sweet.", "wax", "winter.", "twelfth", "teaspoon"},
       "beavers": {"dams?", "deep", "safe", "wolves", "bears.", "branches,", "mud", "stones", "underwater", "door", "frogs,", "fish,", "birds", "dragonflies.", "ecosystem", "engineers!"},
@@ -1107,7 +1228,9 @@ HI = {"cats": {"purr?", "voice", "box,", "twenty", "thirty", "pad", "deep", "kit
       "fireflies": {"glow?", "bodies.", "luciferin,", "luciferase.", "oxygen", "light.", "cold", "heat.", "pattern", "partner.", "switch", "oxygen!"},
       "chameleons": {"fast?", "folded", "bone,", "bow.", "muscle", "elastic", "spring.", "shoots", "twice", "sticky,", "mucus", "sixty", "hundredth"},
       "elephants": {"ears?", "hot", "sweat", "blood", "vessels,", "flapping", "cools", "sounds,", "bigger", "threatened.", "rumbles", "kilometers"},
-      "spiders": {"silk?", "glands,", "liquid", "protein.", "spinnerets,", "nozzles", "pulls,", "line", "solid", "thread.", "seven", "stronger", "steel!"}}[TOPIC]
+      "spiders": {"silk?", "glands,", "liquid", "protein.", "spinnerets,", "nozzles", "pulls,", "line", "solid", "thread.", "seven", "stronger", "steel!"},
+      "dogs": {"tails?", "happy.", "message,", "language", "right", "owner.", "left", "unfamiliar,", "bossy", "calm", "tense.", "conversation,", "smile!"},
+      "penguins": {"huddle?", "cold.", "minus", "forty", "fathers", "egg", "feet.", "warmer", "twenty", "shuffles", "turns", "edge.", "thousands", "wave!"}}[TOPIC]
 
 def kinetic(d, t, line, y, size):
     words = line["text"].split(); n = len(words); a0 = line["start"]; span = line["dur"] * .85
