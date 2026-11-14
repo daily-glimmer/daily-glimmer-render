@@ -2,7 +2,7 @@
 """Daily Glimmer – weekly long video renderer.
 Reads a manifest JSON, downloads each clip, places vertical clips on a blurred 16:9
 background, concatenates everything and writes out.mp4 + chapters.txt."""
-import json, subprocess, sys, urllib.request, pathlib
+import json, subprocess, sys, urllib.request, pathlib, shutil
 
 W, H, FPS = 1920, 1080, 30
 
@@ -24,8 +24,22 @@ def fmt(t):
     t = int(round(t))
     return f"{t//3600}:{t%3600//60:02d}:{t%60:02d}" if t >= 3600 else f"{t//60}:{t%60:02d}"
 
+def passthrough(m):
+    """Glim explainer: publish a finished video unchanged (no re-encode, full quality)."""
+    src = m["file"]
+    if src.startswith("http"):
+        req = urllib.request.Request(src, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req) as r, open("out.mp4", "wb") as f:
+            f.write(r.read())
+    else:
+        shutil.copyfile(src, "out.mp4")
+    pathlib.Path("chapters.txt").write_text(f"0:00 {m.get('title', 'Glim explains')}\n")
+    print(f"done: passthrough {src} ({duration('out.mp4'):.1f} s)")
+
 def main(manifest_path, workdir="work"):
     m = json.loads(pathlib.Path(manifest_path).read_text())
+    if m.get("passthrough"):
+        return passthrough(m)
     wd = pathlib.Path(workdir); wd.mkdir(exist_ok=True)
     parts, chapters, t = [], [], 0.0
     for i, seg in enumerate(m["segments"]):
