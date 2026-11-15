@@ -250,4 +250,5 @@ if __name__ == "__main__":
     if only:
         for s in only.split(","): frame(float(s)).save(f"{OUT}/t{float(s):05.1f}.png")
     else:
-        for fi in range(off, int(DUR * FPS), step): frame(fi / FPS).save(f"{OUT}/f{fi:05d}.png")
+        a = int(os.environ.get("GLIM_FROM", 0)); b = int(os.environ.get("GLIM_TO", int(DUR * FPS)))   # Teilbereich nachrendern
+        for fi in range(a + off, b, step): frame(fi / FPS).save(f"{OUT}/f{fi:05d}.png")

@@ -204,5 +204,53 @@
  "sharks": {
   "title": "Do Sharks Die If They Stop Swimming? Most Can Take Naps 🦈",
   "q": "Do sharks die if they stop swimming? 🦈"
+ },
+ "giraffes": {
+  "title": "How Long Do Giraffes Sleep? Less Than You Think 🦒",
+  "q": "How long do giraffes sleep? 🦒",
+  "text": "How long do giraffes sleep? 🦒 Not long! They mostly doze standing up in short naps – about 4.5 hours a day in zoos. For deep sleep they lie down and rest their head on their body. How long do you sleep? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #giraffe",
+  "fc": "Fun fact: a giraffe's deep sleep often lasts only a few minutes – with its long neck curled back like a pillow! 🦒",
+  "tags": [
+   "glim explains",
+   "giraffe",
+   "how long do giraffes sleep",
+   "giraffe facts",
+   "animal sleep",
+   "animal facts",
+   "daily glimmer"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "bananas": {
+  "title": "Is a Banana a Berry? Botanists Say Yes! 🍌",
+  "q": "Is a banana a berry? 🍌",
+  "text": "Is a banana a berry? 🍌 Yes! To botanists it's a true berry: it grows from one flower with one ovary and keeps its seeds inside. Strawberries? Not true berries! Which fruit surprised you most? 👇 Follow for more WHY? ✨ #explained #science #nature #didyouknow #mythbusting #banana",
+  "fc": "Fun fact: each little 'seed' on a strawberry is actually a tiny fruit of its own, with a seed inside! 🍓",
+  "tags": [
+   "glim explains",
+   "banana",
+   "is a banana a berry",
+   "fruit facts",
+   "botany",
+   "science explained",
+   "daily glimmer"
+  ],
+  "cat": "EDUCATION"
+ },
+ "ducks": {
+  "title": "Does a Duck's Quack Really Not Echo? Scientists Tested It 🦆",
+  "q": "Does a duck's quack really not echo? 🦆",
+  "text": "Does a duck's quack really not echo? 🦆 Myth! Scientists tested it: the echo is there, but a quack fades out slowly, so the echo blends right in. Did you believe this one? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #duck",
+  "fc": "Fun fact: in mallards, only the females make the classic loud quack – males make a quieter, raspy sound! 🦆",
+  "tags": [
+   "glim explains",
+   "duck",
+   "does a duck's quack echo",
+   "duck facts",
+   "myth busting",
+   "animal facts",
+   "daily glimmer"
+  ],
+  "cat": "PETS_ANIMALS"
  }
 }
