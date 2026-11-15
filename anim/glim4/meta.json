@@ -742,5 +742,61 @@
    "animals"
   ],
   "cat": "PETS_ANIMALS"
+ },
+ "kangaroos": {
+  "title": "How Do Kangaroos Hop So Far? Their Legs Work Like Springs 🦘",
+  "q": "How do kangaroos hop so far? 🦘",
+  "text": "How do kangaroos hop so far? 🦘 Long tendons stretch like springs on landing and bounce them into the next leap – up to 8 m! Hopping faster barely costs extra energy. Which animal jumps best? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #kangaroo",
+  "fc": "Fun fact: when kangaroos move slowly, they lean on their strong tail like a fifth leg – scientists call it pentapedal walking! 🦘",
+  "tags": [
+   "glim explains",
+   "kangaroos",
+   "how do kangaroos hop",
+   "australian animals",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "frogs": {
+  "title": "Why Do Frogs Croak? They Sing With Their Mouth Shut 🐸",
+  "q": "Why do frogs croak? 🐸",
+  "text": "Why do frogs croak? 🐸 Males mostly call to attract a mate. They push air past their vocal cords with their mouth shut, and a balloon-like vocal sac makes it louder. Every species has its own song! Heard frogs at night? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #frog",
+  "fc": "Fun fact: the tiny coquí frog of Puerto Rico can call at about 90–100 decibels – roughly as loud as a lawn mower! 🐸",
+  "tags": [
+   "glim explains",
+   "frogs",
+   "why do frogs croak",
+   "frog sounds",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "skunks": {
+  "title": "Why Do Skunks Smell So Bad? They Always Warn You First 🦨",
+  "q": "Why do skunks smell so bad? 🦨",
+  "text": "Why do skunks smell so bad? 🦨 Two glands under the tail make a spray full of sulfur chemicals called thiols. But skunks warn first – hiss, stamp, tail up – and only then spray up to 3 m! Ever smelled one? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #skunk",
+  "fc": "Fun fact: spotted skunks do a handstand on their front paws as a final warning before they spray! 🦨",
+  "tags": [
+   "glim explains",
+   "skunks",
+   "why do skunks smell",
+   "skunk spray",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "oceansalt": {
+  "title": "Why Is the Ocean Salty? Blame the Rain 🌊",
+  "q": "Why is the ocean salty? 🌊",
+  "text": "Why is the ocean salty? 🌊 Rain slowly wears away rocks, rivers carry the salts to the sea, and the sun lifts the water away – but the salt stays. Over millions of years it built up to about 3.5%. Did you know? 👇 Follow for more WHY? ✨ #explained #science #nature #didyouknow #goodnews #ocean",
+  "fc": "Fun fact: according to NOAA, the ocean's salt spread over all land would form a layer about 150 m (500 ft) thick! 🌊",
+  "tags": [
+   "glim explains",
+   "ocean",
+   "why is the ocean salty",
+   "earth science",
+   "sea"
+  ],
+  "cat": "EDUCATION"
  }
 }
