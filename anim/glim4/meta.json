@@ -686,5 +686,61 @@
    "borborygmi"
   ],
   "cat": "EDUCATION"
+ },
+ "whiskers": {
+  "title": "What Are Cat Whiskers Really For? They're Built-In Sensors 🐱",
+  "q": "What are cat whiskers really for? 🐱",
+  "text": "What are cat whiskers really for? 🐱 Each whisker sits in a nerve-packed spot and feels the tiniest touch – even moving air. They're about as wide as the body, so cats can test tight gaps. Did you know that? 👇 Follow for more WHY? ✨ #explained #science #animals #cats #goodnews #cat",
+  "fc": "Fun fact: never trim a cat's whiskers – they're sensors, not just decoration, and they help cats move safely in the dark! 🐱",
+  "tags": [
+   "glim explains",
+   "cat whiskers",
+   "cats",
+   "why do cats have whiskers",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "dognose": {
+  "title": "Why Do Dogs Have Wet Noses? It's a Scent Trap 🐶",
+  "q": "Why do dogs have wet noses? 🐶",
+  "text": "Why do dogs have wet noses? 🐶 A thin layer of mucus traps scent particles, and licking sends the smells to a scent organ in the mouth. A dry nose alone doesn't mean sick! Is your dog's nose wet right now? 👇 Follow for more WHY? ✨ #explained #science #animals #dogs #goodnews #dog",
+  "fc": "Fun fact: in a 2020 study, dogs could detect faint heat from warm objects – their cold nose tip may work like a heat sensor! 🐶",
+  "tags": [
+   "glim explains",
+   "dog nose",
+   "dogs",
+   "why are dogs noses wet",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "snowflakes": {
+  "title": "Why Does Every Snowflake Have Six Sides? It Starts With Water ❄️",
+  "q": "Why does every snowflake have six sides? ❄️",
+  "text": "Why does every snowflake have six sides? ❄️ Frozen water molecules link up in a hexagon pattern, and the corners grow fastest into six arms. Each flake takes its own path, so no two are alike! Seen snow yet? 👇 Follow for more WHY? ✨ #explained #science #nature #didyouknow #goodnews #snow",
+  "fc": "Fun fact: the shape depends on temperature – the classic star-shaped flakes grow best around -15 °C (5 °F)! ❄️",
+  "tags": [
+   "glim explains",
+   "snowflakes",
+   "snow",
+   "why do snowflakes have six sides",
+   "winter"
+  ],
+  "cat": "EDUCATION"
+ },
+ "pandas": {
+  "title": "Why Do Pandas Eat So Much Bamboo? Their Gut Wasn't Made for It 🐼",
+  "q": "Why do pandas eat so much bamboo? 🐼",
+  "text": "Why do pandas eat so much bamboo? 🐼 Pandas have a meat eater's gut and digest less than a fifth of it, so they munch up to 14 hours a day. Bamboo grows all year and few others eat it! Your favorite snack? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #panda",
+  "fc": "Fun fact: pandas lost the taste receptor for savory 'umami' flavors – meat doesn't taste as exciting to them! 🐼🎋",
+  "tags": [
+   "glim explains",
+   "giant panda",
+   "pandas",
+   "why do pandas eat bamboo",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
  }
 }
