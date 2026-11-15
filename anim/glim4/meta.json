@@ -284,5 +284,95 @@
    "space"
   ],
   "cat": "EDUCATION"
+ },
+ "leaves": {
+  "title": "Why Do Leaves Change Color in Fall? The Colors Were Hiding 🍁",
+  "q": "Why do leaves change color in fall? 🍁",
+  "text": "Why do leaves change color in fall? 🍁 Trees stop making green chlorophyll, so the yellow and orange hidden all summer finally show. Many reds are made fresh from trapped sugars. Your favorite fall color? 👇 Follow for more WHY? ✨ #explained #science #nature #didyouknow #goodnews #autumn",
+  "fc": "Fun fact: sunny autumn days plus cool (but not freezing) nights make the brightest reds, because more sugar gets trapped in the leaves! 🍂",
+  "tags": [
+   "glim explains",
+   "fall leaves",
+   "autumn colors",
+   "why leaves change color",
+   "science",
+   "nature"
+  ],
+  "cat": "EDUCATION"
+ },
+ "woodfrogs": {
+  "title": "How Do Wood Frogs Survive Being Frozen? Their Heart Stops! 🐸",
+  "q": "How do wood frogs survive being frozen? 🐸",
+  "text": "How do wood frogs survive being frozen? 🐸 Their liver floods the body with sugar that works like antifreeze, so ice forms outside the cells. In spring they thaw and hop away! Which animal superpower amazes you most? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #frog",
+  "fc": "Fun fact: in Alaska, wood frogs survived around -18 °C (about 0 °F) and stayed frozen for months in the wild! 🐸❄️",
+  "tags": [
+   "glim explains",
+   "wood frog",
+   "frozen frog",
+   "animal facts",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "geckos": {
+  "title": "How Do Geckos Climb Walls? No Glue Needed 🦎",
+  "q": "How do geckos climb walls? 🦎",
+  "text": "How do geckos climb walls? 🦎 No glue! Millions of tiny hairs split into billions of tips that get so close to the wall that van der Waals forces make them stick. Which animal trick should we explain next? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #gecko",
+  "fc": "Fun fact: gecko feet clean themselves as they walk – dirt sticks better to the wall than to the tiny hairs! 🦎",
+  "tags": [
+   "glim explains",
+   "gecko",
+   "gecko feet",
+   "how geckos climb",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "onions": {
+  "title": "Why Do Onions Make Us Cry? It's a Chemical Trap 🧅",
+  "q": "Why do onions make us cry? 🧅",
+  "text": "Why do onions make us cry? 🧅 Cutting breaks the onion's cells, two chemicals mix and an enzyme makes an irritating gas. Your eyes flush it out with tears. Tip: chill it first! What makes you cry in the kitchen? 👇 Follow for more WHY? ✨ #explained #science #food #didyouknow #goodnews #onion",
+  "fc": "Fun fact: the tear gas has a long name – syn-propanethial-S-oxide – and it only forms once the onion is cut! 🧅",
+  "tags": [
+   "glim explains",
+   "onions",
+   "why onions make you cry",
+   "kitchen science",
+   "science",
+   "food"
+  ],
+  "cat": "EDUCATION"
+ },
+ "squirrels": {
+  "title": "How Do Squirrels Find Their Buried Nuts? They Use a Mental Map 🐿️",
+  "q": "How do squirrels find their buried nuts? 🐿️",
+  "text": "How do squirrels find their buried nuts? 🐿️ They remember spots using landmarks, some even sort nuts by type, and their nose finds the exact place. Forgotten nuts grow into new trees! Seen one digging this fall? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #squirrel",
+  "fc": "Fun fact: in a UC Berkeley study, fox squirrels buried the same kind of nut together – a trick called chunking! 🐿️🌰",
+  "tags": [
+   "glim explains",
+   "squirrel",
+   "squirrels burying nuts",
+   "animal facts",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "catfeet": {
+  "title": "How Do Cats Land on Their Feet? The Twist Explained 🐱",
+  "q": "How do cats land on their feet? 🐱",
+  "text": "How do cats land on their feet? 🐱 The inner ear finds 'up', then the cat twists its front half, then its back half – thanks to a super flexible spine. Falls can still hurt, so keep windows safe! Does your cat love heights? 👇 Follow for more WHY? ✨ #explained #science #animals #cats #goodnews #cat",
+  "fc": "Fun fact: kittens start showing the righting reflex at around 3–4 weeks old and master it by about 7 weeks! 🐱",
+  "tags": [
+   "glim explains",
+   "cats",
+   "cat righting reflex",
+   "cats land on feet",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
  }
 }
