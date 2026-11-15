@@ -509,5 +509,62 @@
    "human body"
   ],
   "cat": "EDUCATION"
+ },
+ "owlflight": {
+  "title": "How Do Owls Fly So Silently? Their Wings Have a Secret 🦉",
+  "q": "How do owls fly so silently? 🦉",
+  "text": "How do owls fly so silently? 🦉 Comb-like teeth on the wing edge break up the rushing air, and velvety feathers soak up sound. Big wings mean fewer flaps! Which animal should we explain next? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #owl",
+  "fc": "Fun fact: engineers study owl wings to design quieter fans, wind turbines and aircraft! 🦉✈️",
+  "tags": [
+   "glim explains",
+   "owls",
+   "why are owls silent",
+   "owl flight",
+   "birds",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "dolphins": {
+  "title": "How Do Dolphins Sleep Without Drowning? Half Their Brain Stays Awake 🐬",
+  "q": "How do dolphins sleep without drowning? 🐬",
+  "text": "How do dolphins sleep without drowning? 🐬 Only one half of the brain sleeps at a time – the other half keeps them breathing and on watch, often with one eye open. Would you sleep like a dolphin? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #dolphin",
+  "fc": "Fun fact: this half-brain sleep is called unihemispheric slow-wave sleep – some birds can do it too! 🐬",
+  "tags": [
+   "glim explains",
+   "dolphins",
+   "how do dolphins sleep",
+   "ocean animals",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "popcorn": {
+  "title": "Why Does Popcorn Pop? It's a Tiny Steam Explosion 🍿",
+  "q": "Why does popcorn pop? 🍿",
+  "text": "Why does popcorn pop? 🍿 A tiny drop of water inside each kernel turns into steam when heated. The pressure bursts the hard shell and the starch puffs into foam! Team salty or sweet? 👇 Follow for more WHY? ✨ #explained #science #food #didyouknow #goodnews #popcorn",
+  "fc": "Fun fact: high-speed videos showed the pop sound comes from steam escaping, not from the shell cracking! 🍿",
+  "tags": [
+   "glim explains",
+   "popcorn",
+   "why does popcorn pop",
+   "kitchen science",
+   "food science"
+  ],
+  "cat": "EDUCATION"
+ },
+ "polarbears": {
+  "title": "How Do Polar Bears Stay Warm? Their Skin Is Black! 🐻‍❄️",
+  "q": "How do polar bears stay warm in the Arctic? 🐻‍❄️",
+  "text": "How do polar bears stay warm in the Arctic? 🐻‍❄️ Up to 11 cm of fat, two layers of fur and small ears keep the heat in. Surprise: the hairs are see-through and the skin is black! Which cold animal is next? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #polarbear",
+  "fc": "Fun fact: polar bears lose so little heat that infrared cameras barely see them – mostly just their breath! 🐻‍❄️",
+  "tags": [
+   "glim explains",
+   "polar bears",
+   "arctic animals",
+   "how do polar bears stay warm",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
  }
 }
