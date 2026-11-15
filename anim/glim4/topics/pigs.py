@@ -64,5 +64,5 @@ def SC(i, P, t, u):
         P.badge(540, CENTER - 300, "sunscreen + bug shield", 54, HOPE, CLOUD, back(seg(u, .6, 1.1)))
     else:
         farm(P, mud=True); pig(P, 540, GROUND - 20 - abs(math.sin(t * 3)) * 20, 1.05, t, mud=.65, happy=True)
-        P.heart(540, CENTER - 230, 60, (255, 120, 150))
-        P.stamp(540, CENTER - 420, "FACT", seg(u, .3, .7), col=HOPE, rot=8)
+        P.heart(540, CENTER - 130, 60, (255, 120, 150))
+        P.stamp(540, CENTER - 320, "FACT", seg(u, .3, .7), col=HOPE, rot=8)

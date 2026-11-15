@@ -59,4 +59,4 @@ def SC(i, P, t, u):
         meadow(P, t)
         q = eio(seg(u, .3, 2.5)); bee(P, lerp(900, 360, q), lerp(CENTER - 200, GROUND - 230, q), 1.1, t)
         bee(P, 700 + math.sin(t * 2) * 100, CENTER - 60, 1.0, t, fuzzy=True, col=BUM, flip=-1)
-        P.stamp(540, CENTER - 380, "FACT", seg(u, .3, .7), col=HOPE, rot=8)
+        P.stamp(540, CENTER - 320, "FACT", seg(u, .3, .7), col=HOPE, rot=8)

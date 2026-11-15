@@ -47,7 +47,7 @@ def SC(i, P, t, u):
         water(P, t); x = lerp(900, 200, (u / 6) % 1); hop = abs(math.sin(u * 2.4)) * 160
         hippo(P, x, BED - 120 - hop, 1.0, t)
         if hop < 20: P.ell(x, BED - 4, 160, 20, (150, 130, 95))
-        P.badge(540, SURF - 200, "walk & bounce", 60, NIGHT, GLIM, back(seg(u, .5, 1.0)))
+        P.badge(540, BED + 110, "walk & bounce", 60, NIGHT, GLIM, back(seg(u, .5, 1.0)))
     elif i == 3:
         water(P, t)
         k = seg(u, .2, 3.0); P.circ(780, SURF + 260, 110, (20, 60, 90), outline=CLOUD, w=8)
@@ -63,4 +63,4 @@ def SC(i, P, t, u):
     else:
         water(P, t); x = lerp(850, 250, (u / 6) % 1); hop = abs(math.sin(u * 2.4)) * 150
         hippo(P, x, BED - 120 - hop, .95, t)
-        P.stamp(540, SURF - 210, "FACT", seg(u, .3, .7), col=HOPE, rot=8)
+        P.stamp(540, SURF + 110, "FACT", seg(u, .3, .7), col=HOPE, rot=8)
