@@ -374,5 +374,65 @@
    "animals"
   ],
   "cat": "PETS_ANIMALS"
+ },
+ "flamingoleg": {
+  "title": "Why Do Flamingos Stand on One Leg? It's Easier Than Two 🦩",
+  "q": "Why do flamingos stand on one leg? 🦩",
+  "text": "Why do flamingos stand on one leg? 🦩 It's easier for them: their weight locks the leg joints in place, so they can even nap on one leg using almost no muscle power. Can you stand on one leg for a minute? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #flamingo",
+  "fc": "Fun fact: in a 2017 study, even a flamingo body with no muscle activity stayed balanced on one leg – but not on two! 🦩",
+  "tags": [
+   "glim explains",
+   "flamingo",
+   "flamingo one leg",
+   "bird facts",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "cateyes": {
+  "title": "Why Do Cats' Eyes Glow in the Dark? They Have a Secret Mirror 🐱",
+  "q": "Why do cats' eyes glow in the dark? 🐱",
+  "text": "Why do cats' eyes glow in the dark? 🐱 Behind the eye sits a shiny mirror layer that bounces light back for a second chance – that's the glow. It helps cats see with about 1/6 of the light we need. Have you seen it? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #cat",
+  "fc": "Fun fact: the mirror layer is called the tapetum lucidum – Latin for \"bright carpet\"! 🐱✨",
+  "tags": [
+   "glim explains",
+   "cat eyes",
+   "why do cats eyes glow",
+   "tapetum lucidum",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "earthworms": {
+  "title": "Cut a Worm in Half = Two Worms? Sadly Not 🪱",
+  "q": "Do earthworms become two worms when cut in half? 🪱",
+  "text": "Cut an earthworm in half = two worms? 🪱 Mostly a myth! The front end, with the brain and 5 pairs of hearts, can sometimes regrow a tail – the tail part can't grow a new head. Which superpower would you want? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #earthworm",
+  "fc": "Fun fact: some flatworms called planarians can regrow a whole new body from a tiny piece! 🪱",
+  "tags": [
+   "glim explains",
+   "earthworm",
+   "worm cut in half",
+   "animal myths",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "cows": {
+  "title": "Do Cows Really Have Four Stomachs? Not Quite 🐄",
+  "q": "Do cows really have four stomachs? 🐄",
+  "text": "Do cows really have four stomachs? 🐄 Not quite! It's one big stomach with four rooms. The biggest, the rumen, is full of microbes that break down tough grass. Which farm animal should we explain next? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #cow",
+  "fc": "Fun fact: cows burp their food back up and chew it again – \"chewing the cud\" – for up to 8 hours a day! 🐄",
+  "tags": [
+   "glim explains",
+   "cow",
+   "cow stomach",
+   "four stomachs",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
  }
 }

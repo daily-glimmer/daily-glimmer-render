@@ -10,7 +10,7 @@ git add glim/$tag.mp4 manifests/$tag.json
 git commit -q -m "Glim $tag: $title
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_01XFtfdftJTR23228UeH1hPJ"
+Claude-Session: https://claude.ai/code/session_01XFtfdeenqQ3AMaym9hcaiu"
 ok=0; for n in 1 2 3 4 5; do git pull -q --rebase; if git -c push.negotiate=true push -q 2>/dev/null; then ok=1; break; fi; sleep 5; done
 [ $ok = 1 ] || { echo "PUSH FAIL $tag"; exit 1; }
 sha=$(git rev-parse HEAD); echo "pushed $sha"
