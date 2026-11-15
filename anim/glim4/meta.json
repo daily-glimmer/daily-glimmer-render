@@ -88,5 +88,121 @@
    "birds"
   ],
   "cat": "PETS_ANIMALS"
+ },
+ "sunflowers": {
+  "title": "Do Sunflowers Really Follow the Sun? Only When They're Young 🌻",
+  "q": "Do sunflowers really follow the sun? 🌻",
+  "text": "Do sunflowers really follow the sun? 🌻 Only young ones! They turn east to west by day and swing back at night, guided by an inner clock. Grown-ups face east for good. Did you know this one? 👇 Follow for more WHY? ✨ #explained #science #nature #didyouknow #mythbusting #sunflowers",
+  "fc": "Fun fact: in a 2016 study, east-facing sunflower heads warmed up faster in the morning and got about 5x more bee visits! 🐝",
+  "tags": [
+   "glim explains",
+   "sunflowers",
+   "do sunflowers follow the sun",
+   "heliotropism",
+   "plant facts",
+   "science",
+   "nature"
+  ],
+  "cat": "EDUCATION"
+ },
+ "porcupines": {
+  "title": "Can Porcupines Shoot Their Quills? Not Even an Inch 🦔",
+  "q": "Can porcupines shoot their quills? 🦔",
+  "text": "Can porcupines shoot their quills? 🦔 No! Their ~30,000 quills sit loosely and pop off when touched. Tiny barbs hook into skin. First they warn you: rattle, then tail swing. Would you hug one? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #porcupine",
+  "fc": "Fun fact: a porcupine grows new quills to replace the ones it loses! 🦔",
+  "tags": [
+   "glim explains",
+   "porcupine",
+   "can porcupines shoot their quills",
+   "porcupine quills",
+   "animal myths",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "sloths": {
+  "title": "Why Are Sloths So Slow? It's All About Their Food 🦥",
+  "q": "Why are sloths so slow? 🦥",
+  "text": "Why are sloths so slow? 🦥 They eat leaves with very little energy, and one meal can take weeks to digest. So they save energy everywhere, and algae even turns their fur green! Would you live at sloth speed? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #sloth",
+  "fc": "Fun fact: sloths climb down from their tree to poop only about once a week! 🦥",
+  "tags": [
+   "glim explains",
+   "sloth",
+   "why are sloths so slow",
+   "sloth facts",
+   "animal facts",
+   "science explained",
+   "daily glimmer"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "hippos": {
+  "title": "Can Hippos Swim? They Actually Moonwalk Underwater 🦛",
+  "q": "Can hippos swim? 🦛",
+  "text": "Can hippos swim? 🦛 Not really! They are too dense to float, so they walk and bounce along the river bottom and push off to breathe. They can even do it while asleep! Which animal myth next? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #hippo",
+  "fc": "Fun fact: a hippo can hold its breath for about 5 minutes and surfaces to breathe without waking up! 🦛",
+  "tags": [
+   "glim explains",
+   "hippo",
+   "can hippos swim",
+   "hippopotamus",
+   "animal myths",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "pigs": {
+  "title": "Do Pigs Really Sweat a Lot? The Saying Is Wrong 🐷",
+  "q": "Do pigs really sweat a lot? 🐷",
+  "text": "Do pigs really sweat a lot? 🐷 Not at all! Pigs have hardly any working sweat glands. That's why they love mud: it cools them as it dries and works like sunscreen. Which animal saying should we check next? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #pigs",
+  "fc": "Fun fact: wet mud keeps a pig cool longer than plain water, because it dries more slowly! 🐷",
+  "tags": [
+   "glim explains",
+   "pigs",
+   "do pigs sweat",
+   "sweating like a pig",
+   "animal myths",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "starfish": {
+  "title": "Is a Starfish Really a Fish? Not Even Close ⭐",
+  "q": "Is a starfish really a fish? ⭐",
+  "text": "Is a starfish really a fish? ⭐ Nope! No gills, no fins, no backbone. Sea stars are cousins of sea urchins, pump seawater instead of blood, and have an eye on every arm! Did you know this one? 👇 Follow for more WHY? ✨ #explained #science #ocean #didyouknow #mythbusting #seastar",
+  "fc": "Fun fact: many sea stars can regrow a lost arm, and some species can even regrow a whole body from one arm! ⭐",
+  "tags": [
+   "glim explains",
+   "starfish",
+   "sea star",
+   "is a starfish a fish",
+   "ocean facts",
+   "animal myths",
+   "science"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "bees": {
+  "title": "Do All Bees Die After They Sting? Most Don't 🐝",
+  "q": "Do all bees die after they sting? 🐝",
+  "text": "Do all bees die after they sting? 🐝 No! Only honeybee workers, because their barbed stinger gets stuck in our skin. Bumblebees have smooth stingers, and male bees can't sting at all. Which bug myth next? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #bees",
+  "fc": "Fun fact: when a honeybee stings another insect, it can usually pull its stinger out and survive! 🐝",
+  "tags": [
+   "glim explains",
+   "bees",
+   "do bees die after they sting",
+   "honeybee",
+   "animal myths",
+   "science",
+   "insects"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "sharks": {
+  "title": "Do Sharks Die If They Stop Swimming? Most Can Take Naps 🦈",
+  "q": "Do sharks die if they stop swimming? 🦈"
  }
 }
