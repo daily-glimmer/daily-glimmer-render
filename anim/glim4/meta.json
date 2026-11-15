@@ -566,5 +566,125 @@
    "animals"
   ],
   "cat": "PETS_ANIMALS"
+ },
+ "seahorses": {
+  "title": "Why Do Male Seahorses Give Birth? Dad Does Everything 🌊",
+  "q": "Why do male seahorses give birth? 🌊",
+  "text": "Why do male seahorses give birth? 🌊 Mom puts her eggs into a pouch on dad's belly. He seals it and feeds the babies oxygen for weeks – then pumps out hundreds of tiny seahorses! Know any other super dads? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #seahorse",
+  "fc": "Fun fact: the pouch grows placenta-like tissue that brings the babies oxygen and nutrients – a true pregnancy! 🌊",
+  "tags": [
+   "glim explains",
+   "seahorse",
+   "seahorse dad",
+   "male pregnancy",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "butterflies": {
+  "title": "Do Butterflies Really Taste With Their Feet? Yes – Here's Why 🦋",
+  "q": "Do butterflies really taste with their feet? 🦋",
+  "text": "Do butterflies taste with their feet? 🦋 True! Taste sensors on their feet let a mom drum on a leaf to check if it's the right food for her caterpillars before laying eggs. What would you taste with your feet? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #butterfly",
+  "fc": "Fun fact: butterflies drink nectar through a long tube-like tongue called a proboscis that stays coiled up when not in use! 🦋",
+  "tags": [
+   "glim explains",
+   "butterfly",
+   "butterflies taste",
+   "insects",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "moonphases": {
+  "title": "Why Does the Moon Change Shape? It Actually Doesn't 🌙",
+  "q": "Why does the Moon change shape? 🌙",
+  "text": "Why does the Moon change shape? 🌙 It doesn't! The Sun always lights half of it. As the Moon circles Earth we see more or less of that bright half – from new moon to full moon. Your favorite phase? 👇 Follow for more WHY? ✨ #explained #science #space #didyouknow #goodnews #moon",
+  "fc": "Fun fact: from one new moon to the next takes about 29.5 days – that's where our word \"month\" comes from! 🌙",
+  "tags": [
+   "glim explains",
+   "moon phases",
+   "moon",
+   "space",
+   "science",
+   "astronomy"
+  ],
+  "cat": "EDUCATION"
+ },
+ "yawning": {
+  "title": "Why Do We Yawn? It's Not About Oxygen 🥱",
+  "q": "Why do we yawn? 🥱",
+  "text": "Why do we yawn? 🥱 Not for oxygen – tests ruled that out. A leading idea: a big yawn may help cool the brain and keep us alert. And yawns spread most between friends and family! Did you just yawn? 👇 Follow for more WHY? ✨ #explained #science #body #didyouknow #goodnews #yawn",
+  "fc": "Fun fact: in classic experiments, breathing extra oxygen or extra CO2 didn't change how often people yawned! 🥱",
+  "tags": [
+   "glim explains",
+   "yawning",
+   "why do we yawn",
+   "contagious yawn",
+   "science",
+   "human body"
+  ],
+  "cat": "EDUCATION"
+ },
+ "spiderweb": {
+  "title": "Why Don't Spiders Get Stuck in Their Own Webs? 3 Clever Tricks 🕷️",
+  "q": "Why don't spiders get stuck in their own webs? 🕷️",
+  "text": "Why don't spiders get stuck in their own webs? 🕷️ The spokes aren't sticky, branching leg hairs barely touch the glue, and a coating on their legs makes it grip less. Plus: careful steps! Spiders: cool or creepy? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #spider",
+  "fc": "Fun fact: Smithsonian scientists studied orb-weaver spiders in 2012 and found their legs' hairs and coating together beat the glue! 🕷️",
+  "tags": [
+   "glim explains",
+   "spider",
+   "spider web",
+   "why spiders dont get stuck",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "twinkle": {
+  "title": "Why Do Stars Twinkle? It's Not the Stars at All ✨",
+  "q": "Why do stars twinkle? ✨",
+  "text": "Why do stars twinkle? ✨ It's our air! Moving layers of warm and cold air bend starlight back and forth. Stars are tiny points, so every wobble shows – planets shine steadier. Ever spotted a planet? 👇 Follow for more WHY? ✨ #explained #science #space #didyouknow #goodnews #stars",
+  "fc": "Fun fact: astronomers call twinkling \"scintillation\" – and space telescopes avoid it by sitting above the air! 🔭",
+  "tags": [
+   "glim explains",
+   "stars",
+   "why do stars twinkle",
+   "space",
+   "science",
+   "astronomy"
+  ],
+  "cat": "EDUCATION"
+ },
+ "crickets": {
+  "title": "How Do Crickets Chirp? They Play Their Wings Like a Violin 🦗",
+  "q": "How do crickets chirp? 🦗",
+  "text": "How do crickets chirp? 🦗 Not with a voice! A male rubs a scraper on one wing across a ridged file on the other, like a tiny violin. They hear with ears on their front legs! Love the sound or can't sleep? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #cricket",
+  "fc": "Fun fact: crickets chirp faster when it's warm – you can even estimate the temperature by counting chirps! 🦗🌡️",
+  "tags": [
+   "glim explains",
+   "cricket",
+   "crickets chirp",
+   "insects",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "stomach": {
+  "title": "Why Does Your Stomach Growl? It's Not Just Hunger 🍽️",
+  "q": "Why does your stomach growl? 🍽️",
+  "text": "Why does your stomach growl? 🍽️ Muscles in your gut squeeze food, gas and liquid along – that bubbling is the sound. When you're empty, cleanup waves sweep through and nothing muffles them! Worst moment yours growled? 👇 Follow for more WHY? ✨ #explained #science #body #didyouknow #goodnews #stomach",
+  "fc": "Fun fact: the doctors' word for stomach rumbling is \"borborygmi\" – it even sounds like a rumble! 🍽️",
+  "tags": [
+   "glim explains",
+   "stomach growling",
+   "why does my stomach growl",
+   "human body",
+   "science",
+   "borborygmi"
+  ],
+  "cat": "EDUCATION"
  }
 }
