@@ -73,9 +73,9 @@ def SC(i, P, t, u):
     else:
         ground(P, CENTER + 260)
         g = eio(seg(u, .3, 4.0))
-        P.line([(540, CENTER + 260), (540, CENTER + 260 - 520 * g)], (110, 75, 50), 10 + 40 * g)
+        P.line([(540, CENTER + 260), (540, CENTER + 260 - 400 * g)], (110, 75, 50), 10 + 40 * g)
         for k in range(5):
             a = -math.pi / 2 + (k - 2) * .55
-            P.circ(540 + math.cos(a) * 160 * g, CENTER + 260 - 520 * g + math.sin(a) * 100 * g, 120 * g, (80, 150, 70))
+            P.circ(540 + math.cos(a) * 160 * g, CENTER + 260 - 400 * g + math.sin(a) * 100 * g, 110 * g, (80, 150, 70))
         acorn(P, 540, CENTER + 300, 1.2)
-        P.badge(540, CENTER - 300, "forgotten nut = new tree", 54, HOPE, CLOUD, back(seg(u, 1.0, 1.5)))
+        P.badge(540, CENTER + 360, "forgotten nut = new tree", 54, HOPE, CLOUD, back(seg(u, 1.0, 1.5)))
