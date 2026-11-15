@@ -464,5 +464,50 @@
    "animals"
   ],
   "cat": "PETS_ANIMALS"
+ },
+ "bears": {
+  "title": "How Do Bears Survive Winter Without Eating? Their Heart Almost Stops 🐻",
+  "q": "How do bears survive winter without eating? 🐻",
+  "text": "How do bears survive winter without eating? 🐻 They fatten up in fall, then their heart slows to as few as 8 beats a minute and they burn fat for months. Their body even recycles waste into protein! Sleep all winter? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #bear",
+  "fc": "Fun fact: mother bears give birth in the den in midwinter – and the tiny cubs nurse while mom keeps sleeping! 🐻",
+  "tags": [
+   "glim explains",
+   "bears",
+   "bear hibernation",
+   "animal facts",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "woodpeckers": {
+  "title": "Why Don't Woodpeckers Get Headaches? Scientists Filmed It in Slow Motion 🐦",
+  "q": "Why don't woodpeckers get headaches? 🐦",
+  "text": "Why don't woodpeckers get headaches? 🐦 It's not a cushion! Slow-motion videos showed the head hits like a stiff hammer. The real secret: their tiny brains handle the impacts far better than big ones. Which bird next? 👇 Follow for more WHY? ✨ #explained #science #animals #birds #goodnews #woodpecker",
+  "fc": "Fun fact: woodpeckers can peck up to about 20 times per second – and thousands of times in a single day! 🐦",
+  "tags": [
+   "glim explains",
+   "woodpecker",
+   "woodpecker headache",
+   "bird facts",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS"
+ },
+ "goosebumps": {
+  "title": "Why Do We Get Goosebumps? A Leftover From Our Furry Past 🥶",
+  "q": "Why do we get goosebumps? 🥶",
+  "text": "Why do we get goosebumps? 🥶 Each hair has a tiny muscle that pulls it upright when you're cold or excited. In furry animals that traps warm air – we lost our fur, so we just get bumps! When did you last get them? 👇 Follow for more WHY? ✨ #explained #science #body #didyouknow #goodnews #goosebumps",
+  "fc": "Fun fact: in a 2020 Harvard study with mice, the same nerves that cause goosebumps also woke up hair-growing stem cells! 🐭",
+  "tags": [
+   "glim explains",
+   "goosebumps",
+   "why do we get goosebumps",
+   "body facts",
+   "science",
+   "human body"
+  ],
+  "cat": "EDUCATION"
  }
 }
