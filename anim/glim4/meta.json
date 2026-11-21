@@ -854,5 +854,95 @@
    "science"
   ],
   "cat": "EDUCATION"
+ },
+ "penguins": {
+  "title": "Do Penguins Really Have No Knees? The Answer Is Hiding 🐧",
+  "q": "Do penguins really have no knees?",
+  "text": "Do penguins really have no knees? 🐧 Myth! Every penguin has knees, tucked up inside its body in a deep crouch. The short legs we see are mostly ankle and foot. What surprised you most? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #penguin",
+  "fc": "Fun fact: walking costs emperor penguins about twice the energy of other animals their size. Their short legs are built for swimming! 🐧",
+  "tags": [
+   "glim explains",
+   "penguin",
+   "penguin knees",
+   "animal myths",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "classic",
+  "music": "ukulele",
+  "stamps": "MYTH,FACT"
+ },
+ "reindeer": {
+  "title": "Do Reindeer Eyes Really Change Color in Winter? The Arctic Secret 🦌",
+  "q": "Do reindeer eyes really change color in winter?",
+  "text": "Do reindeer eyes really change color in winter? 🦌 Yes! Gold in summer, deep blue in winter. Months of darkness squeeze a mirror layer in the eye, so it turns blue and catches more light. Would you want winter eyes? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #reindeer",
+  "fc": "Fun fact: a blue winter tapetum reflects only about half as much light back out of the eye, so more light stays inside! 🦌",
+  "tags": [
+   "glim explains",
+   "reindeer",
+   "reindeer eyes",
+   "winter animals",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "night",
+  "music": "calm",
+  "stamps": "TRUE,FACT"
+ },
+ "roach": {
+  "title": "Can a Cockroach Live Without Its Head? The Answer Is Creepy 🪳",
+  "q": "Can a cockroach really live without its head?",
+  "text": "Can a cockroach really live without its head? 🪳 True! It breathes through tiny holes in its body, and nerve clusters keep it walking for weeks. In the end it can't eat or drink. Would you have guessed? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #cockroach",
+  "fc": "Fun fact: the cut-off head can keep waving its antennae for hours on its own! 🪳",
+  "tags": [
+   "glim explains",
+   "cockroach",
+   "headless cockroach",
+   "insect facts",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "classic",
+  "music": "ukulele",
+  "stamps": "TRUE,FACT"
+ },
+ "sharktrees": {
+  "title": "Are Sharks Really Older Than Trees? The Timeline Is Wild 🦈",
+  "q": "Are sharks really older than trees?",
+  "text": "Are sharks really older than trees? 🦈 True! Shark scales go back 420 to 450 million years, but the first trees only grew about 385 million years ago. Sharks even outlived the dinosaurs! Did that surprise you? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #shark",
+  "fc": "Fun fact: the first trees grew around 385 million years ago, long after sharks first swam the seas! 🌳",
+  "tags": [
+   "glim explains",
+   "sharks",
+   "sharks older than trees",
+   "prehistoric animals",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "paper",
+  "music": "cosmic",
+  "stamps": "TRUE,FACT"
+ },
+ "camelspit": {
+  "title": "Do Camels Really Spit? It's Way Grosser Than You Think 🐪",
+  "q": "Do camels really spit at people?",
+  "text": "Do camels really spit at people? 🐪 Not quite! What flies out is mostly half-digested food from the stomach, mixed with saliva. It's a smelly warning to back off. Would you stand close to a camel? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #camel",
+  "fc": "Fun fact: camels chew cud like cows, bringing food back up from their stomach to chew it again! 🐪",
+  "tags": [
+   "glim explains",
+   "camel",
+   "camel spit",
+   "animal myths",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "night",
+  "music": "bright",
+  "stamps": "NOT QUITE,FACT"
  }
 }
