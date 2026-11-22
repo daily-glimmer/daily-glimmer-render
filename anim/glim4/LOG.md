@@ -30,13 +30,10 @@ Slot | Frage | Länge lang/snap | Tag | Metricool-IDs | Stil | Musik | Lauf
 2026-12-07 19:00 | Do goats really eat tin cans? | 28.5 s / 8.0 s | glim-2026-12-07-1900 (+ -snap) | lang 437229560, snap 437229581 | night | ukulele | Lauf B
 2026-12-08 19:00 | Do honeybees sleep through the winter? | 30.7 s / 8.0 s | glim-2026-12-08-1900 (+ -snap) | lang 437229626, snap 437229645 | sunny | calm | Lauf B
 2026-12-09 19:00 | Can elephants really jump? | 30.5 s / 8.3 s | glim-2026-12-09-1900 (+ -snap) | lang 437229687, snap 437229709 | classic | bright | Lauf B
-<<<<<<< HEAD
 2026-12-11 19:00 | Do sharks have bones? | 30.2 s / 8.4 s | glim-2026-12-11-1900 (+ -snap) | lang 437231391, snap 437231412 | night | ? | Lauf A (Render), Lauf B (eingeplant)
 2026-12-13 19:00 | Do moths eat your clothes? | 31.4 s / 8.2 s | glim-2026-12-13-1900 (+ -snap) | lang 437236328, snap 437236353 | sunny | ukulele | Lauf B
 2026-12-10 19:00 | Is a koala a bear? | 30.8 s / 8.4 s | glim-2026-12-10-1900 (+ -snap) | lang 437237321, snap 437237332 | paper | ukulele | Lauf B
 2026-12-12 19:00 | Do wolves really howl at the moon? | 29.7 s / 8.2 s | glim-2026-12-12-1900 (+ -snap) | lang 437239407, snap 437239433 | night | cosmic | Lauf B
-=======
 | 2026-11-22 04:16 | Lauf B ABGEBROCHEN: Piper-Stimme ljspeech nicht ladbar (huggingface.co vom Egress-Proxy dieser Umgebung blockiert, HTTP 403) – keine Claims, nichts eingeplant; Nacht-Branches zusammengeführt | – | – | – | – | – | Lauf B |
->>>>>>> origin/claude/intelligent-hypatia-9nac53
 2026-12-14 19:00 | Is a spider an insect? | – / – | glim-2026-12-14-1900 (+ -snap) | lang 437304737, snap 437304764 | ? | ? | Lauf B (07:15, nur nachträglich eingeplant)
 | 2026-11-22 07:15 | Lauf B: keine Neuproduktion (huggingface.co weiter blockiert, HTTP 403); gehostetes Spider-Video eingeplant; Nachtbilanz 29 Videos eingeplant | – | – | – | –
