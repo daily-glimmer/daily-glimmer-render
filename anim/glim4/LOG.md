@@ -37,3 +37,4 @@ Slot | Frage | Länge lang/snap | Tag | Metricool-IDs | Stil | Musik | Lauf
 | 2026-11-22 04:16 | Lauf B ABGEBROCHEN: Piper-Stimme ljspeech nicht ladbar (huggingface.co vom Egress-Proxy dieser Umgebung blockiert, HTTP 403) – keine Claims, nichts eingeplant; Nacht-Branches zusammengeführt | – | – | – | – | – | Lauf B |
 2026-12-14 19:00 | Is a spider an insect? | – / – | glim-2026-12-14-1900 (+ -snap) | lang 437304737, snap 437304764 | ? | ? | Lauf B (07:15, nur nachträglich eingeplant)
 | 2026-11-22 07:15 | Lauf B: keine Neuproduktion (huggingface.co weiter blockiert, HTTP 403); gehostetes Spider-Video eingeplant; Nachtbilanz 29 Videos eingeplant | – | – | – | –
+| 2026-11-22 (beautiful-clarke) | Lauf ABGEBROCHEN: Piper-Stimme ljspeech nicht ladbar (huggingface.co vom Egress-Proxy blockiert, HTTP 403) – Rückstand (backlog.done fehlt) nicht produziert; 19:00-Slots 23.–30.11. laut Metricool FREI; keine Claims, nichts eingeplant | – | – | – | – | – | Code-Aufgabe |
