@@ -21,3 +21,4 @@ Slot | Frage | Länge lang/snap | Tag | Metricool-IDs | Stil | Musik | Lauf
 2026-12-03 13:00 | Why can you see your breath when it's cold? | 29.6 s / 8.9 s | glim-2026-12-03-1300 (+ -snap) | lang 437209586, snap 437209461 | night | calm | Lauf B
 2026-12-01 13:00 | Do crocodiles really cry while they eat? | 31.6 s / 9.2 s | glim-2026-12-01-1300 (+ -snap) | lang 437212431, snap 437212310 | classic | ukulele | Lauf B
 2026-12-02 13:00 | Do squirrels sleep through the whole winter? | 30.9 s / 9.1 s | glim-2026-12-02-1300 (+ -snap) | lang 437216230, snap 437216245 | paper | bright | Lauf B
+2026-12-04 13:00 | Can snakes hear without ears? | 31.4 s / 8.9 s | glim-2026-12-04-1300 (+ -snap) | lang 437219198, snap 437219214 | sunny | cosmic | Lauf B
