@@ -27,4 +27,4 @@ Slot | Frage | Länge lang/snap | Tag | Metricool-IDs | Stil | Musik | Lauf
 2026-12-07 19:00 | Do goats really eat tin cans? | 28.5 s / 8.0 s | glim-2026-12-07-1900 (+ -snap) | lang 437229560, snap 437229581 | night | ukulele | Lauf B
 2026-12-08 19:00 | Do honeybees sleep through the winter? | 30.7 s / 8.0 s | glim-2026-12-08-1900 (+ -snap) | lang 437229626, snap 437229645 | sunny | calm | Lauf B
 2026-12-09 19:00 | Can elephants really jump? | 30.5 s / 8.3 s | glim-2026-12-09-1900 (+ -snap) | lang 437229687, snap 437229709 | classic | bright | Lauf B
-2026-12-11 19:00 | Do sharks have bones? | 30.2 s / 8.4 s | glim-2026-12-11-1900 (+ -snap) | lang 437231391, snap 437231412 | night | ? | Lauf B
+2026-12-11 19:00 | Do sharks have bones? | 30.2 s / 8.4 s | glim-2026-12-11-1900 (+ -snap) | lang 437231391, snap 437231412 | night | ? | Lauf A (Render), Lauf B (eingeplant)
