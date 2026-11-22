@@ -29,7 +29,9 @@ F_BODY = _fontfile("manrope-latin-800-normal.woff", DEJ)
 _F = {}
 def font(px, kind="body"):
     px = max(4, int(px)); key = (px, kind)
-    if key not in _F: _F[key] = ImageFont.truetype(F_HEAD if kind == "head" else F_BODY, px)
+    if key not in _F:
+        if len(_F) > 10: _F.clear()   # Cache begrenzen: animierte Schriftgrößen ließen den Speicher sonst um GB wachsen (OOM)
+        _F[key] = ImageFont.truetype(F_HEAD if kind == "head" else F_BODY, px)
     return _F[key]
 def clamp(t, a=0., b=1.): return max(a, min(b, t))
 def lerp(a, b, t): return a + (b - a) * t
