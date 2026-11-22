@@ -982,5 +982,24 @@
   "style": "sunny",
   "music": "calm",
   "stamps": "TRUE,FACT"
+ },
+ "zebras": {
+  "title": "Are Zebras White With Black Stripes? Look Under the Fur 🦓",
+  "q": "Are zebras white with black stripes?",
+  "text": "Are zebras white with black stripes? 🦓 Not quite! Under the fur, a zebra's skin is black. In the white stripes, the hair simply grows without pigment. Did you guess right? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #zebra",
+  "fc": "Fun fact: in a 2019 study, far fewer biting flies landed on zebras than on horses – the stripes seem to confuse them! 🦓",
+  "tags": [
+   "glim explains",
+   "zebra",
+   "zebra stripes",
+   "are zebras black or white",
+   "animal myths",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "paper",
+  "music": "ukulele",
+  "stamps": "NOT QUITE,FACT"
  }
 }
