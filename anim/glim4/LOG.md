@@ -12,3 +12,4 @@ Slot | Frage | Länge lang/snap | Tag | Metricool-IDs | Stil | Musik | Lauf
 2026-11-23 13:00 | Are flamingos born pink? | 29.9 s / 8.2 s | glim-2026-11-23-1300 (+ -snap) | lang 437185553, snap 437185582 | classic | bright | Lauf B
 2026-12-04 19:00 | Do snowshoe hares really turn white in winter? | 30.4 s / 8.2 s | glim-2026-12-04-1900 (+ -snap) | lang 437187662, snap 437187689 | sunny | calm | Lauf B
 2026-11-24 13:00 | Are zebras white with black stripes? | 29.9 s / 8.3 s | glim-2026-11-24-1300 (+ -snap) | lang 437192775, snap 437192793 | paper | ukulele | Lauf B
+2026-11-25 13:00 | Does an octopus really have three hearts? | 30.4 s / 9.2 s | glim-2026-11-25-1300 (+ -snap) | lang 437192829, snap 437192851 | night | cosmic | Lauf B
