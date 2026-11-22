@@ -29,3 +29,4 @@ Slot | Frage | Länge lang/snap | Tag | Metricool-IDs | Stil | Musik | Lauf
 2026-12-09 19:00 | Can elephants really jump? | 30.5 s / 8.3 s | glim-2026-12-09-1900 (+ -snap) | lang 437229687, snap 437229709 | classic | bright | Lauf B
 2026-12-11 19:00 | Do sharks have bones? | 30.2 s / 8.4 s | glim-2026-12-11-1900 (+ -snap) | lang 437231391, snap 437231412 | night | ? | Lauf A (Render), Lauf B (eingeplant)
 2026-12-13 19:00 | Do moths eat your clothes? | 31.4 s / 8.2 s | glim-2026-12-13-1900 (+ -snap) | lang 437236328, snap 437236353 | sunny | ukulele | Lauf B
+2026-12-10 19:00 | Is a koala a bear? | 30.8 s / 8.4 s | glim-2026-12-10-1900 (+ -snap) | lang 437237321, snap 437237332 | paper | ukulele | Lauf B
