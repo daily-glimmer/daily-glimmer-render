@@ -20,3 +20,4 @@ Slot | Frage | Länge lang/snap | Tag | Metricool-IDs | Stil | Musik | Lauf
 2026-11-28 13:00 | Do ducks get cold feet standing on ice? | 30.3 s / 9.6 s | glim-2026-11-28-1300 (+ -snap) | lang 437209398, snap 437209412 | paper | bright | Lauf B
 2026-12-03 13:00 | Why can you see your breath when it's cold? | 29.6 s / 8.9 s | glim-2026-12-03-1300 (+ -snap) | lang 437209586, snap 437209461 | night | calm | Lauf B
 2026-12-01 13:00 | Do crocodiles really cry while they eat? | 31.6 s / 9.2 s | glim-2026-12-01-1300 (+ -snap) | lang 437212431, snap 437212310 | classic | ukulele | Lauf B
+2026-12-02 13:00 | Do squirrels sleep through the whole winter? | 30.9 s / 9.1 s | glim-2026-12-02-1300 (+ -snap) | lang 437216230, snap 437216245 | paper | bright | Lauf B
