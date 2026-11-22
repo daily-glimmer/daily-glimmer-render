@@ -23,3 +23,4 @@ Slot | Frage | Länge lang/snap | Tag | Metricool-IDs | Stil | Musik | Lauf
 2026-12-02 13:00 | Do squirrels sleep through the whole winter? | 30.9 s / 9.1 s | glim-2026-12-02-1300 (+ -snap) | lang 437216230, snap 437216245 | paper | bright | Lauf B
 2026-12-04 13:00 | Can snakes hear without ears? | 31.4 s / 8.9 s | glim-2026-12-04-1300 (+ -snap) | lang 437219198, snap 437219214 | sunny | cosmic | Lauf B
 2026-12-06 19:00 | Is one dog year really seven human years? | 33.5 s / 9.2 s | glim-2026-12-06-1900 (+ -snap) | lang 437219659, snap 437219670 | paper | bright | Lauf B
+2026-12-05 13:00 | Do mice really love cheese? | 30.1 s / 8.1 s | glim-2026-12-05-1300 (+ -snap) | lang 437221160, snap 437221174 | classic | ukulele | Lauf B
