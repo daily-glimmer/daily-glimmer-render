@@ -2,7 +2,7 @@
 CENTER = 1050
 exec(open(os.path.join(HERE, "topics", "elephants.py")).read(), globals())
 PAL = ((200, 140, 80), (240, 200, 140))
-HI = {"jump?", "no!", "can't", "jump", "one", "foot", "ground.", "five", "thousand", "kilograms,", "pillar-like", "weight,", "never!"}
+HI = {"jump?", "myth!", "really", "can't", "jump", "one", "foot", "ground.", "five", "thousand", "kilograms,", "pillar-like", "weight,", "never!"}
 WOW = (1,)
 GROUND = CENTER + 250
 
@@ -19,7 +19,7 @@ def SC(i, P, t, u):
     elif i == 1:
         savanna(P); elephant(P, 560, CENTER + 50, 1.1, t)
         P.cross(560, CENTER - 230, 90, k=back(seg(u, .4, .9)))
-        P.stamp(560, CENTER + 470, "TRUE", seg(u, .25, .7), col=HOPE, rot=-6)
+        P.stamp(560, CENTER + 470, "MYTH", seg(u, .25, .7), rot=-6)
         P.badge(560, CENTER - 380, "no jumping", 56, NIGHT, CLOUD, back(seg(u, 1.0, 1.5)))
     elif i == 2:
         savanna(P)

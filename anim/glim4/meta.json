@@ -944,5 +944,119 @@
   "style": "night",
   "music": "bright",
   "stamps": "NOT QUITE,FACT"
+ },
+ "flamingopink": {
+  "title": "Are Flamingos Born Pink? The Answer Surprises Everyone 🦩",
+  "q": "Are flamingos born pink?",
+  "text": "Are flamingos born pink? 🦩 Myth! Chicks hatch fluffy and gray or white. Their pink comes from carotenoid pigments in the algae and brine shrimp they eat. What color would you be? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #flamingo",
+  "fc": "Fun fact: it can take a young flamingo about two to three years to get its full pink color! 🦩",
+  "tags": [
+   "glim explains",
+   "flamingo",
+   "are flamingos born pink",
+   "flamingo chick",
+   "animal myths",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "classic",
+  "music": "bright",
+  "stamps": "MYTH,FACT"
+ },
+ "hares": {
+  "title": "Do Snowshoe Hares Really Turn White in Winter? The Trick Is Wild 🐇",
+  "q": "Do snowshoe hares really turn white in winter?",
+  "text": "Do snowshoe hares really turn white in winter? 🐇 True! Their fur doesn't change color – they grow a whole new white coat, triggered by the shorter days of autumn. Could you spot one in the snow? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #snowshoehare",
+  "fc": "Fun fact: a snowshoe hare's huge hind feet spread its weight, so it can run on soft snow without sinking! 🐾",
+  "tags": [
+   "glim explains",
+   "snowshoe hare",
+   "hare white in winter",
+   "winter animals",
+   "animal facts",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "sunny",
+  "music": "calm",
+  "stamps": "TRUE,FACT"
+ },
+ "zebras": {
+  "title": "Are Zebras White With Black Stripes? Look Under the Fur 🦓",
+  "q": "Are zebras white with black stripes?",
+  "text": "Are zebras white with black stripes? 🦓 Not quite! Under the fur, a zebra's skin is black. In the white stripes, the hair simply grows without pigment. Did you guess right? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #zebra",
+  "fc": "Fun fact: in a 2019 study, far fewer biting flies landed on zebras than on horses – the stripes seem to confuse them! 🦓",
+  "tags": [
+   "glim explains",
+   "zebra",
+   "zebra stripes",
+   "are zebras black or white",
+   "animal myths",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "paper",
+  "music": "ukulele",
+  "stamps": "NOT QUITE,FACT"
+ },
+ "octopus": {
+  "title": "Does an Octopus Really Have Three Hearts? It Gets Even Weirder 🐙",
+  "q": "Does an octopus really have three hearts?",
+  "text": "Does an octopus really have three hearts? 🐙 True! Two small hearts pump blood through the gills, one big heart feeds the body – and their blood is blue. Which fact surprised you most? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #octopus",
+  "fc": "Fun fact: octopus blood uses a copper-based protein called hemocyanin, which turns blue when it carries oxygen! 🐙",
+  "tags": [
+   "glim explains",
+   "octopus",
+   "octopus three hearts",
+   "blue blood",
+   "ocean facts",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "night",
+  "music": "cosmic",
+  "stamps": "TRUE,FACT"
+ },
+ "giraffeneck": {
+  "title": "Does a Giraffe Have More Neck Bones Than You? Count Again 🦒",
+  "q": "Does a giraffe have more neck bones than you?",
+  "text": "Does a giraffe have more neck bones than you? 🦒 Myth! A giraffe has seven neck bones, exactly like you. Each one is just super long, making a neck of nearly two meters. Did you know that? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #giraffe",
+  "fc": "Fun fact: a single giraffe neck bone can be about 25 centimeters long – longer than a pencil! 🦒",
+  "tags": [
+   "glim explains",
+   "giraffe",
+   "giraffe neck bones",
+   "giraffe facts",
+   "animal myths",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "sunny",
+  "music": "ukulele",
+  "stamps": "MYTH,FACT"
+ },
+ "goldfishtank": {
+  "title": "Does a Goldfish Only Grow to the Size of Its Tank? Not Like You Think 🐟",
+  "q": "Does a goldfish only grow to the size of its tank?",
+  "text": "Does a goldfish only grow to the size of its tank? 🐟 Myth! Dirty water, stress and crowding stunt its growth – the fish stays small but isn't healthier. Is a tiny bowl a good home? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #goldfish",
+  "fc": "Fun fact: with clean water and plenty of space, common goldfish can grow to about 30 centimeters! 🐟",
+  "tags": [
+   "glim explains",
+   "goldfish",
+   "goldfish tank size",
+   "goldfish myth",
+   "pet fish",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "classic",
+  "music": "calm",
+  "stamps": "MYTH,FACT"
  }
 }

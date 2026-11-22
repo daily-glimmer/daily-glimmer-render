@@ -55,7 +55,7 @@ def SC(i, P, t, u):
         ice(P, t); standing_duck(P, 400, CENTER + 220, 1.1, t, female=True)
         k = back(seg(u, .5, 1.0))
         P.circ(800, CENTER - 80, 150 * k, (40, 60, 100))
-        P.d.pieslice([*P.c.p(800 - 150 * k, CENTER - 230 * k + 150 - 150), *P.c.p(800 + 150 * k, CENTER - 80 + 150 * k)], -90, -90 + 18 * eio(seg(u, 1.0, 2.0)), fill=HOOK) if k > .1 else None
+        P.d.pieslice([*P.c.p(800 - 150 * k, CENTER - 80 - 150 * k), *P.c.p(800 + 150 * k, CENTER - 80 + 150 * k)], -90, -90 + 18 * eio(seg(u, 1.0, 2.0)), fill=HOOK) if k > .1 else None
         P.badge(800, CENTER + 130, "5% heat loss", 50, HOOK, CLOUD, back(seg(u, 1.6, 2.1)))
     else:
         ice(P, t); standing_duck(P, 330, CENTER + 220, 1.1, t, female=False); standing_duck(P, 760, CENTER + 230, .9, t, female=True)
