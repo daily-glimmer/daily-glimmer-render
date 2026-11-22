@@ -18,3 +18,4 @@ Slot | Frage | Länge lang/snap | Tag | Metricool-IDs | Stil | Musik | Lauf
 2026-11-30 13:00 | Does lightning never strike the same place twice? | 32.0 s / 9.6 s | glim-2026-11-30-1300 (+ -snap) | lang 437203972, snap 437203991 | sunny | cosmic | Lauf B
 2026-11-29 13:00 | Will a mother bird reject a chick if you touch it? | 31.8 s / 9.2 s | glim-2026-11-29-1300 (+ -snap) | lang 437206840, snap 437206863 | night | calm | Lauf B
 2026-11-28 13:00 | Do ducks get cold feet standing on ice? | 30.3 s / 9.6 s | glim-2026-11-28-1300 (+ -snap) | lang 437209398, snap 437209412 | paper | bright | Lauf B
+2026-12-03 13:00 | Why can you see your breath when it's cold? | 29.6 s / 8.9 s | glim-2026-12-03-1300 (+ -snap) | lang 437209586, snap 437209461 | night | calm | Lauf B
