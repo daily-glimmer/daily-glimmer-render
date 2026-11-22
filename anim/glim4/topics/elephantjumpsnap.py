@@ -6,6 +6,6 @@ def SC(i, P, t, u):
         _b = P.badge
         P.badge = lambda x, y, *a, **kw: _b(x, min(y, CENTER + 400), *a, **kw)
         _s = P.stamp   # Stempel nicht unter Schluss-Glim/CTA: nach oben rechts
-        P.stamp = lambda x, y, *a, **kw: _s(800, CENTER - 300, *a, **kw)
+        P.stamp = lambda x, y, *a, **kw: _s(760, CENTER + 260, *a, **kw)
     _SC_FULL(0 if i == 0 else 1, P, t, u)
 WOW = (1,)
