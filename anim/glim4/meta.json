@@ -1058,5 +1058,119 @@
   "style": "classic",
   "music": "calm",
   "stamps": "MYTH,FACT"
+ },
+ "lightning": {
+  "title": "Does Lightning Never Strike the Same Place Twice? One Building Disagrees ⚡",
+  "q": "Does lightning never strike the same place twice?",
+  "text": "Does lightning never strike the same place twice? ⚡ Myth! Tall, pointy things get hit again and again – the Empire State Building takes around 20 to 25 strikes a year. Have you ever seen lightning up close? 👇 Follow for more WHY? ✨ #explained #science #weather #didyouknow #mythbusting #lightning",
+  "fc": "Fun fact: during one storm, the Empire State Building was struck eight times in just 24 minutes! ⚡",
+  "tags": [
+   "glim explains",
+   "lightning",
+   "lightning myth",
+   "empire state building lightning",
+   "weather facts",
+   "science",
+   "myth busting"
+  ],
+  "cat": "EDUCATION",
+  "style": "sunny",
+  "music": "cosmic",
+  "stamps": "MYTH,FACT"
+ },
+ "birdtouch": {
+  "title": "Will a Mother Bird Reject a Chick If You Touch It? Here's the Truth 🐦",
+  "q": "Will a mother bird reject a chick if you touch it?",
+  "text": "Will a mother bird reject a chick if you touch it? 🐦 Myth! Most birds have a weak sense of smell and recognize their babies by look and sound. Still, watch nests from a distance. Have you ever helped a bird? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #birds",
+  "fc": "Fun fact: a fledgling hopping on the ground is often just learning to fly – its parents are usually close by, still feeding it! 🐦",
+  "tags": [
+   "glim explains",
+   "baby bird",
+   "touching baby birds",
+   "bird myths",
+   "fledgling",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "night",
+  "music": "calm",
+  "stamps": "MYTH,FACT"
+ },
+ "ducksfeet": {
+  "title": "Do Ducks Get Cold Feet Standing on Ice? Their Legs Have a Secret 🦆",
+  "q": "Do ducks get cold feet standing on ice?",
+  "text": "Do ducks get cold feet standing on ice? 🦆 Not really! Warm blood flowing down the leg passes cold blood coming back up and hands over its heat, so the feet stay just above freezing. Would you stand barefoot on ice? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #ducks",
+  "fc": "Fun fact: in mallards, only about 5% of their body heat escapes through their feet – thanks to a built-in heat exchanger! 🦆",
+  "tags": [
+   "glim explains",
+   "ducks",
+   "duck feet ice",
+   "countercurrent heat exchange",
+   "winter animals",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "paper",
+  "music": "bright",
+  "stamps": "NOT REALLY,FACT"
+ },
+ "breath": {
+  "title": "Why Can You See Your Breath When It's Cold? It's Not What You Think 🌬️",
+  "q": "Why can you see your breath when it's cold?",
+  "text": "Why can you see your breath when it's cold? 🌬️ It's a tiny cloud! Your warm breath carries invisible water vapor that turns into tiny droplets in cold air. Did you know you could make clouds? 👇 Follow for more WHY? ✨ #explained #science #winter #didyouknow #goodnews #weather",
+  "fc": "Fun fact: you can't see your breath on a warm day because the air is warm enough to keep the water as invisible vapor! 🌬️",
+  "tags": [
+   "glim explains",
+   "see your breath",
+   "cold weather science",
+   "water vapor",
+   "dew point",
+   "winter science",
+   "science explained"
+  ],
+  "cat": "EDUCATION",
+  "style": "night",
+  "music": "calm",
+  "stamps": "NOT AIR,FACT"
+ },
+ "crocotears": {
+  "title": "Do Crocodiles Really Cry While They Eat? Scientists Checked 🐊",
+  "q": "Do crocodiles really cry while they eat?",
+  "text": "Do crocodiles really cry while they eat? 🐊 True! Scientists filmed alligators and caimans tearing up during meals – likely as hissing and huffing push air through their sinuses. Did you think crocodile tears were real? 👇 Follow for more WHY? ✨ #explained #science #animals #mythbusting #crocodile",
+  "fc": "Fun fact: in one study, 5 out of 7 alligators and caimans had tears in their eyes while eating! 🐊",
+  "tags": [
+   "glim explains",
+   "crocodile tears",
+   "alligator",
+   "caiman",
+   "animal myths",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "classic",
+  "music": "ukulele",
+  "stamps": "TRUE,FACT"
+ },
+ "squirrelwinter": {
+  "title": "Do Squirrels Sleep Through the Whole Winter? Not Even Close 🐿️",
+  "q": "Do squirrels sleep through the whole winter?",
+  "text": "Do squirrels sleep through the whole winter? 🐿️ Myth! Tree squirrels never hibernate. They stay active, dig up food they buried in fall and cuddle in cozy nests on freezing days. Seen one in the snow? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #squirrel",
+  "fc": "Fun fact: a single gray squirrel can bury several thousand snacks in one season – and finds them with memory and smell! 🐿️",
+  "tags": [
+   "glim explains",
+   "squirrel",
+   "do squirrels hibernate",
+   "winter animals",
+   "animal myths",
+   "science",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "paper",
+  "music": "bright",
+  "stamps": "MYTH,FACT"
  }
 }
