@@ -9,3 +9,4 @@ Slot | Frage | Länge lang/snap | Tag | Metricool-IDs | Stil | Musik | Lauf
 2026-11-22 13:00 | Do camels really spit at people? | 32.0 s / 8.3 s | glim-2026-11-22-1300 (+ -snap) | lang 437126185, snap 437126362 | night | bright | Lauf A
 | 2026-11-22 00:17 | Lauf B ABGEBROCHEN: Piper-Stimme nicht ladbar (huggingface.co vom Egress-Proxy dieser Umgebung blockiert, HTTP 403) | – | – | – | – | – | Lauf B |
 | 2026-11-22 00:47 | Lauf A ABGEBROCHEN: Piper-Stimme ljspeech nicht ladbar (huggingface.co vom Egress-Proxy blockiert, HTTP 403; kein Mirror erreichbar) – keine Claims, nichts eingeplant | – | – | – | – | – | Lauf A |
+2026-11-23 13:00 | Are flamingos born pink? | 29.9 s / 8.2 s | glim-2026-11-23-1300 (+ -snap) | lang 437185553, snap 437185582 | classic | bright | Lauf B
