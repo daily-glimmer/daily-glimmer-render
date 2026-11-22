@@ -3,7 +3,7 @@ CENTER = 1050
 BROWN, BROWN2, WHITE, WHITE2 = (150, 110, 70), (120, 85, 55), (250, 250, 252), (215, 222, 235)
 SNOW = (242, 247, 252)
 PAL = ((70, 110, 160), (180, 205, 230))
-HI = {"white", "winter?", "true!", "brand", "new", "shorter", "days", "ten", "weeks,", "brown.", "snowshoes,", "spot!"}
+HI = {"white", "winter?", "true!", "brand", "new", "shorter", "days", "six", "weeks,", "brown.", "snowshoes,", "spot!"}
 WOW = (1,)
 
 def snow(P, t, y=CENTER + 300):
@@ -62,7 +62,7 @@ def SC(i, P, t, u):
         hare(P, 520, CENTER + 230, 1.2, t, k=k)
         P.rrect(140, CENTER - 280, 940, CENTER - 210, 35, (60, 70, 90))
         P.rrect(150, CENTER - 270, 150 + 780 * max(.03, k), CENTER - 220, 25, WHITE)
-        P.badge(540, CENTER - 140, "about 10 weeks", 56, NIGHT, CLOUD, back(seg(u, .5, 1.0)))
+        P.badge(540, CENTER - 140, "about 6 weeks", 56, NIGHT, CLOUD, back(seg(u, .5, 1.0)))
     elif i == 4:
         snow(P, t, CENTER + 100)
         for j in range(4):
