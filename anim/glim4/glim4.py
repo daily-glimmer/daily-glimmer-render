@@ -3,16 +3,20 @@ Aufruf:  GLIM_FPS=60 GLIM_STYLE=night python3 glim4.py <topic> <tl.json> <frames
 Themen liegen als eigene Dateien in topics/<topic>.py (werden per exec geladen) und definieren
   SC(i, P, t, u)  – Illustration je Satz (i = Satz, u = Sekunden seit Satzbeginn)
   PAL = (oben, unten)  – Hintergrundverlauf,  HI = {Schlüsselwörter}
-Stile: classic | night | sunny | paper.  Basiert auf glim3.py (Glim v3, Kinetic-Text, Weißblitze).
+Stile: classic | night | sunny | paper | gouache (gemalt, seit 25.11.2026 Standard für neue Videos).  Basiert auf glim3.py (Glim v3, Kinetic-Text, Weißblitze).
 Neu in v4: FPS frei wählbar (Standard 60), Bricolage Grotesque/Manrope (Fallback DejaVu),
 Stil-Varianten mit Schattenebene (paper/sunny), Sternenhimmel (night), Mythos-Stempel („MYTH“/„FACT“)."""
 import json, math, os, random, sys
+import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 W, H, S = 1080, 1920, 2
 FPS = int(os.environ.get("GLIM_FPS", "60"))
-STYLE = os.environ.get("GLIM_STYLE", "classic")
+STYLE = os.environ.get("GLIM_STYLE", "gouache")
+_LOCK = os.path.join(HERE, "STYLE")   # Nutzer-Entscheidung 25.11.2026: einheitlicher Gouache-Stil für ALLE neuen Glim-Videos.
+if os.path.exists(_LOCK) and not os.environ.get("GLIM_IGNORE_LOCK"):   # Datei STYLE übersteuert jede Stil-Angabe der Aufgaben
+    STYLE = open(_LOCK).read().strip() or STYLE
 TOPIC, TL, OUT = sys.argv[1], json.load(open(sys.argv[2])), sys.argv[3]
 os.makedirs(OUT, exist_ok=True)
 L, DUR = TL["lines"], TL["total"]
@@ -171,13 +175,15 @@ def kinetic(d, t, line, y, size):
 
 # ---------- Stil-Hintergründe (vorberechnet) ----------
 random.seed(3)
-LIGHT = STYLE in ("sunny", "paper")
+LIGHT = STYLE in ("sunny", "paper", "gouache")
 if STYLE == "night":
     TOP, BOT = lc((6, 10, 28), PAL[0], .35), lc((10, 16, 40), PAL[1], .45)
 elif STYLE == "sunny":
     TOP, BOT = lc(PAL[0], (255, 246, 228), .62), lc(PAL[1], (255, 236, 214), .5)
 elif STYLE == "paper":
     TOP, BOT = (243, 236, 222), lc((236, 226, 206), PAL[1], .12)
+elif STYLE == "gouache":   # gemalte, leicht gedämpfte Farben
+    TOP, BOT = lc(PAL[0], (246, 240, 226), .6), lc(PAL[1], (240, 230, 210), .4)
 else:
     TOP, BOT = PAL
 BG = Image.new("RGBA", (W * S, H * S)); bd = ImageDraw.Draw(BG)
@@ -193,11 +199,47 @@ if STYLE == "sunny":   # weiche Sonnenstrahlen oben rechts
         bd.polygon([(W * .85 * S, H * .08 * S), (W * .85 * S + math.cos(a) * 2600 * S, H * .08 * S + math.sin(a) * 2600 * S),
                     (W * .85 * S + math.cos(a + .14) * 2600 * S, H * .08 * S + math.sin(a + .14) * 2600 * S)], fill=lc(TOP, (255, 255, 255), .25))
     BG = BG.filter(ImageFilter.GaussianBlur(6 * S))
+# ---------- Gouache (gemalter Stil) ----------
+def _gblur(a, r): return np.asarray(Image.fromarray(a.astype(np.uint8)).filter(ImageFilter.GaussianBlur(r)), np.float32) / 255
+def _gouache_tex():
+    """feste Pinselstrich-Textur (Bildschirmkoordinaten -> flackert nicht), Werte -1..1"""
+    cache = "/tmp/glim_gouache_tex.npz"
+    if os.path.exists(cache): z = np.load(cache); return z["tex"], z["nz"], z["paper"], z["wash"]
+    rnd = random.Random(7); im = Image.new("L", (W, H), 128); d = ImageDraw.Draw(im)
+    for _ in range(60000):
+        x, y = rnd.uniform(0, W), rnd.uniform(0, H); a = math.radians(200 + rnd.uniform(-25, 25)); L_ = rnd.uniform(9, 22)
+        d.line((x, y, x + math.cos(a) * L_, y + math.sin(a) * L_), fill=int(128 + rnd.uniform(-60, 60)), width=rnd.choice((2, 3, 3, 4)))
+    tex = (np.asarray(im.filter(ImageFilter.GaussianBlur(.7)), np.float32) - 128) / 70
+    rng = np.random.default_rng(3)
+    def low(sc): return np.asarray(Image.fromarray((rng.random((H // sc + 2, W // sc + 2)) * 255).astype(np.uint8)).resize((W, H), Image.BICUBIC), np.float32) / 127.5 - 1
+    nz, paper, wash = low(5), (rng.random((H, W)).astype(np.float32) * 2 - 1), low(90)
+    np.savez(cache, tex=tex, nz=nz, paper=paper, wash=wash); return tex, nz, paper, wash
+if STYLE == "gouache":
+    GTEX, GNZ, GPAPER, GWASH = _gouache_tex()
+    b = np.asarray(BG.convert("RGB").resize((W, H), Image.BILINEAR), np.float32)
+    b *= (1 + .045 * GWASH[..., None] + .035 * GTEX[..., None])          # Farbwolken + Pinselstruktur im Hintergrund
+    BG = Image.fromarray(np.clip(b, 0, 255).astype(np.uint8)).resize((W * S, H * S), Image.BILINEAR).convert("RGBA")
+def gouache_fx(lay1):
+    """Figuren-Ebene (RGBA, 1x) gemalt aussehen lassen: Licht oben links / Schatten unten rechts je Farbfläche,
+    dunklere Ränder, Pinselstruktur, leicht unruhige Kanten. (~0,25 s/Bild)"""
+    a = np.asarray(lay1); A = a[..., 3]; inside = A > 100
+    key = a[..., 0].astype(np.int16) * 3 + a[..., 1].astype(np.int16) * 4 + a[..., 2]   # Farbschlüssel je Fläche
+    key[~inside] = -999; D = 7
+    def edge(dy, dx): return (np.abs(np.roll(key, (dy, dx), axis=(0, 1)) - key) > 60) & inside
+    hl = _gblur(edge(D, D) * 255, 4); sh = _gblur(edge(-D, -D) * 255, 5)
+    rim = inside & (_gblur(inside * 255, 2) < .93)
+    f = (1 - .34 * sh) * (1 - .22 * _gblur(rim * 255, 1.2)) * (1 + .13 * GTEX)
+    rgb = a[..., :3].astype(np.float32)
+    rgb += (255 - rgb) * (.2 * hl)[..., None]
+    rgb *= f[..., None]
+    A2 = _gblur(A, 1.0) * 255 + GNZ * 55
+    A = np.clip((A2 - 128) * 2.5 + 128, 0, 255) * (A > 8)
+    return Image.fromarray(np.dstack([np.clip(rgb, 0, 255), A]).astype(np.uint8), "RGBA")
 STARS = [(random.random() * W, random.random() * H * .9, random.random() * 2.6 + 1, random.random() * 6.28) for _ in range(150 if STYLE == "night" else 60)]
 VIG = Image.new("L", (W, H), 0); vd = ImageDraw.Draw(VIG)
 for i in range(40): vd.ellipse([-W * .35 + i * 6, -H * .2 + i * 8, W * 1.35 - i * 6, H * 1.2 - i * 8], fill=int(i * 6.3))
 VIG = VIG.filter(ImageFilter.GaussianBlur(60)).point(lambda v: min(255, (130 if STYLE == "night" else 160) + v)); DARK = Image.new("RGB", (W, H), (5, 8, 20))
-GLOW_GAIN = {"night": .8, "classic": .5, "sunny": .25, "paper": .15}.get(STYLE, .5)
+GLOW_GAIN = {"night": .8, "classic": .5, "sunny": .25, "paper": .15, "gouache": .1}.get(STYLE, .5)
 
 def frame(t):
     base = BG.copy(); lay = Image.new("RGBA", (W * S, H * S), (0, 0, 0, 0)); glow = Image.new("RGB", (W * S, H * S))
@@ -210,9 +252,10 @@ def frame(t):
             Pb.circ(x, y, r * (.6 + .5 * tw), lc(TOP, (255, 250, 220), .35 + .65 * tw))
         elif STYLE == "classic":
             Pb.circ(x, (y - t * 20 * r) % H, r, lc(TOP, CLOUD, .25 * tw))
-        else:
+        elif STYLE != "gouache":
             Pb.circ(x, (y - t * 12 * r) % H, r * 1.6, lc(TOP, (255, 255, 255), .45 * tw))
     pop = back(seg(t, T[i] - .25, T[i] + .35)); z = (0.92 + .08 * pop) * (1 + .03 * math.sin(t * .6))
+    if STYLE == "gouache": z = 1.03 + .05 * pop + .02 * math.sin(t * .6)   # nie unter 100 %: Flächen reichen immer bis zum Rand
     P = Pen(d, g, Cam(z, W / 2, H / 2 + 40)); P.layer = lay
     SC(i, P, t, u)
     talking = 0
@@ -229,7 +272,12 @@ def frame(t):
         sh = sh.point(lambda v: int(v * (.42 if STYLE == "paper" else .3))).resize((W * S, H * S), Image.BILINEAR)
         shadow = Image.new("RGBA", (W * S, H * S), (40, 30, 20, 0)); shadow.putalpha(sh)
         base.alpha_composite(shadow, (int(10 * S), int(14 * S)))
-    base.alpha_composite(lay)
+    if STYLE == "gouache":
+        g1 = gouache_fx(lay.reduce(S))
+        b1 = base.reduce(S); b1.alpha_composite(g1)
+        base = b1.resize((W * S, H * S), Image.BICUBIC)           # Text danach wieder scharf in 2x
+    else:
+        base.alpha_composite(lay)
     td = ImageDraw.Draw(base)
     for k, l in enumerate(L):
         if l["start"] - .1 <= t < l["start"] + l["dur"] + .5: kinetic(td, t, l, 330 if k else 380, 86 if k == 0 else 64)
@@ -241,6 +289,8 @@ def frame(t):
     small = glow.point(lambda v: int(v * GLOW_GAIN)).resize((W // 4, H // 4), Image.BILINEAR).filter(ImageFilter.GaussianBlur(8))
     img = ImageChops.add(base.convert("RGB"), small.resize((W * S, H * S), Image.BILINEAR)).resize((W, H), Image.LANCZOS)
     fl = max([0] + [1 - abs(t - (s - .25)) / .16 for s in T[1:]])
+    if STYLE == "gouache":   # Papierkorn über alles
+        img = Image.fromarray(np.clip(np.asarray(img, np.float32) * (1 + .035 * GPAPER[..., None]), 0, 255).astype(np.uint8))
     if fl > 0: img = Image.blend(img, Image.new("RGB", (W, H), (255, 255, 255)), clamp(fl) * (.35 if LIGHT else .55))
     return img if LIGHT else Image.composite(img, DARK, VIG)
 
