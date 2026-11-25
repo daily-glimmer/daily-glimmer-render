@@ -873,5 +873,158 @@
   "style": "gouache",
   "music": "ukulele 15",
   "stamps": "1,5"
+ },
+ "lemmings": {
+  "title": "Do Lemmings Really Jump Off Cliffs? The Truth Is Stranger 🐹",
+  "q": "Do lemmings really jump off cliffs? 🐹",
+  "text": "Do lemmings really jump off cliffs? 🐹 No! Their numbers boom every 3–4 years and many swim off to find new homes. The famous cliff scene was staged for a 1958 film. Which animal myth fooled you? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #lemmings",
+  "fc": "Fun fact: lemming numbers boom every 3–4 years – that's when many wander off (and swim!) to find new homes. 🐹",
+  "tags": [
+   "glim explains",
+   "lemmings",
+   "animal myths",
+   "myth or fact",
+   "lemming myth"
+  ],
+  "cat": "PETS_ANIMALS",
+  "music": "ukulele 15",
+  "style": "paper",
+  "stamps": "1,5"
+ },
+ "duckfeet": {
+  "title": "Do Ducks' Feet Freeze on Ice? Their Secret Trick Is Genius 🦆",
+  "q": "Do ducks get frozen feet on ice? 🦆",
+  "text": "Do ducks get frozen feet on ice? 🦆 Myth! Warm blood flowing down the legs heats the cold blood coming back up, so the feet stay just above freezing. Which winter animal next? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #duck",
+  "fc": "Fun fact: many birds use this same countercurrent heat trick, from gulls to penguins! 🐧",
+  "tags": [
+   "glim explains",
+   "duck",
+   "duck feet",
+   "why don't ducks feet freeze",
+   "myth busting"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "sunny",
+  "music": "calm 12",
+  "stamps": "1,5"
+ },
+ "hiccups": {
+  "title": "Why Do We Get Hiccups? Your Body Is Doing Something Weird 😮",
+  "q": "Why do we get hiccups? 😮",
+  "text": "Why do we get hiccups? 😮 Your diaphragm, the big breathing muscle, twitches and pulls in a gulp of air. Your vocal cords snap shut – hic! What's your best hiccup trick? 👇 Follow for more WHY? ✨ #explained #science #body #didyouknow #goodnews #hiccups",
+  "fc": "Fun fact: babies can hiccup even before they're born – while still in the womb! 👶",
+  "tags": [
+   "glim explains",
+   "hiccups",
+   "why do we hiccup",
+   "human body",
+   "science"
+  ],
+  "cat": "EDUCATION",
+  "music": "bright 8",
+  "style": "sunny",
+  "stamps": ""
+ },
+ "koalabear": {
+  "title": "Is a Koala Really a Bear? The Answer Starts With a Jelly Bean 🐨",
+  "q": "Is a koala really a bear? 🐨",
+  "text": "Is a koala really a bear? 🐨 Nope! Koalas are marsupials, like kangaroos. A newborn is jelly-bean sized and grows in mom's pouch for about 6 months. Which animal name fooled you? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #koala",
+  "fc": "Fun fact: the koala's closest living relative is the wombat, another Aussie marsupial with a pouch! 🐨",
+  "tags": [
+   "glim explains",
+   "koala",
+   "is a koala a bear",
+   "marsupials",
+   "animal myths"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "classic",
+  "music": "ukulele 15",
+  "stamps": "1,5"
+ },
+ "thunder": {
+  "title": "Why Do We See Lightning Before Thunder? Try This Trick ⚡",
+  "q": "Why do we see lightning before we hear thunder? ⚡",
+  "text": "Why do we see lightning before we hear thunder? ⚡ Light arrives almost instantly, but sound needs about 3 seconds per kilometer. Count the seconds and divide by 3! How many seconds did you count? 👇 Follow for more WHY? ✨ #explained #science #weather #didyouknow #goodnews #thunder",
+  "fc": "Fun fact: lightning heats the air to about 50,000°F – roughly five times hotter than the Sun's surface (NOAA). ⚡",
+  "tags": [
+   "glim explains",
+   "lightning",
+   "thunder",
+   "weather science",
+   "speed of sound"
+  ],
+  "cat": "EDUCATION",
+  "music": "cosmic 20",
+  "style": "night",
+  "stamps": ""
+ },
+ "moths": {
+  "title": "Do Moths Really Love Light? The Real Reason Is Wild 🌙",
+  "q": "Do moths really love flames? 🌙",
+  "text": "Do moths really love light? 🌙 Nope – they get trapped! Insects keep their backs toward the brightest light, which used to be the sky. Near a lamp that makes them circle and flip. Seen one at your porch light? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #moths",
+  "fc": "Fun fact: in a 2024 study, high-speed cameras showed moths flipping upside down when a light shone from below! 🌙",
+  "tags": [
+   "glim explains",
+   "moths",
+   "moth to a flame",
+   "why are moths attracted to light",
+   "animal myths"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "night",
+  "music": "cosmic 20",
+  "stamps": "1,5"
+ },
+ "babybirds": {
+  "title": "If You Touch a Baby Bird, Will Its Mom Reject It? The Truth Is Surprising 🐦",
+  "q": "If you touch a baby bird, will its mother reject it? 🐦",
+  "text": "If you touch a baby bird, will its mother reject it? 🐦 No – that's a myth! Parents react to begging calls and open beaks, not human scent. Fluffy fledglings on the ground usually have parents nearby. Found one? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #birds",
+  "fc": "Fun fact: fledglings often leave the nest before they can fly well – their parents keep feeding them on the ground! 🐦",
+  "tags": [
+   "glim explains",
+   "baby bird",
+   "touch a baby bird",
+   "bird myths",
+   "fledgling"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "paper",
+  "music": "calm 10",
+  "stamps": "1,5"
+ },
+ "otters": {
+  "title": "Why Do Sea Otters Hold Hands? The Reason Is Adorable 🦦",
+  "q": "Why do sea otters hold hands? 🦦",
+  "text": "Why do sea otters hold hands? 🦦 When they nap on their backs, wind and currents could pull them apart – so they link paws or wrap up in kelp in groups called rafts. Who would you hold hands with? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #goodnews #seaotter",
+  "fc": "Fun fact: sea otters have the thickest fur of any animal – up to about a million hairs per square inch! 🦦",
+  "tags": [
+   "glim explains",
+   "sea otters",
+   "otters holding hands",
+   "animal facts",
+   "animals"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "classic",
+  "music": "ukulele 10",
+  "stamps": ""
+ },
+ "giraffeneck": {
+  "title": "Did Giraffes Get Long Necks by Stretching? Nope! 🦒",
+  "q": "Did giraffes get long necks by stretching? 🦒",
+  "text": "Did giraffes get long necks by stretching? 🦒 Myth! Giraffes born with longer necks reached more leaves and raised more young, and males swing their necks in fights. Which animal should we explain next? 👇 Follow for more WHY? ✨ #explained #science #animals #didyouknow #mythbusting #giraffe",
+  "fc": "Fun fact: a giraffe's neck has just 7 bones, the same number as yours, but each can be about 10 inches (25 cm) long! 🦒",
+  "tags": [
+   "glim explains",
+   "giraffe",
+   "giraffe neck",
+   "animal myths",
+   "evolution"
+  ],
+  "cat": "PETS_ANIMALS",
+  "style": "sunny",
+  "music": "ukulele 22",
+  "stamps": "1,5"
  }
 }
