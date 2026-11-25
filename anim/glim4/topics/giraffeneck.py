@@ -89,10 +89,10 @@ def SC(i, P, t, u):
         for j in range(7):
             q = (j + .5) / 7; kk = back(seg(u, 3.0 + j * .18, 3.3 + j * .18))
             if kk > .02: P.circ(lerp(bx, hx - 10, q), lerp(by, hy + 40, q), 15 * kk, CLOUD, outline=NIGHT, w=4)
-        P.badge(850, CENTER - 160, "millions of years", 50, NIGHT, CLOUD, back(seg(u, .2, .7)))
+        P.badge(770, CENTER - 160, "millions of years", 50, NIGHT, CLOUD, back(seg(u, .2, .7)))
         P.line([(hx + 70, hy), (hx + 70, GROUND - 330 * .85)], CLOUD, 6)
-        P.badge(850, CENTER + 20, "about 6 ft", 56, HOPE, CLOUD, back(seg(u, 2.6, 3.1)))
-        P.badge(850, CENTER + 200, "7 neck bones", 56, HOOK, CLOUD, back(seg(u, 3.4, 3.9)))
+        P.badge(770, CENTER + 20, "about 6 ft", 56, HOPE, CLOUD, back(seg(u, 2.6, 3.1)))
+        P.badge(770, CENTER + 200, "7 neck bones", 56, HOOK, CLOUD, back(seg(u, 3.4, 3.9)))
     elif i == 4:
         savanna(P, t)
         sw = math.sin(u * 3.2)
