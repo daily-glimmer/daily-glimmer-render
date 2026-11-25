@@ -889,7 +889,19 @@
   "cat": "PETS_ANIMALS",
   "music": "ukulele 15",
   "style": "paper",
-  "stamps": "1,5"
+  "stamps": "1,5",
+  "tag": "glim-2026-11-27-1900",
+  "slot": "2026-11-27 19:00",
+  "style_used": "gouache",
+  "metricool": {
+   "lang": 442398276,
+   "snap": 442468466
+  },
+  "len": [
+   32.3,
+   9.4
+  ],
+  "snap": "lemsnap"
  },
  "duckfeet": {
   "title": "Do Ducks' Feet Freeze on Ice? Their Secret Trick Is Genius 🦆",
@@ -923,7 +935,19 @@
   "cat": "EDUCATION",
   "music": "bright 8",
   "style": "sunny",
-  "stamps": ""
+  "stamps": "",
+  "tag": "glim-2026-11-28-1900",
+  "slot": "2026-11-28 19:00",
+  "style_used": "gouache",
+  "metricool": {
+   "lang": 442398327,
+   "snap": 442468488
+  },
+  "len": [
+   30.4,
+   8.7
+  ],
+  "snap": "hiccupssnap"
  },
  "koalabear": {
   "title": "Is a Koala Really a Bear? The Answer Starts With a Jelly Bean 🐨",
@@ -957,7 +981,19 @@
   "cat": "EDUCATION",
   "music": "cosmic 20",
   "style": "night",
-  "stamps": ""
+  "stamps": "",
+  "tag": "glim-2026-11-29-1900",
+  "slot": "2026-11-29 19:00",
+  "style_used": "gouache",
+  "metricool": {
+   "lang": 442398378,
+   "snap": 442468504
+  },
+  "len": [
+   32.6,
+   9.4
+  ],
+  "snap": "thundersnap"
  },
  "moths": {
   "title": "Do Moths Really Love Light? The Real Reason Is Wild 🌙",
@@ -974,7 +1010,19 @@
   "cat": "PETS_ANIMALS",
   "style": "night",
   "music": "cosmic 20",
-  "stamps": "1,5"
+  "stamps": "1,5",
+  "tag": "glim-2026-11-30-1900",
+  "slot": "2026-11-30 19:00",
+  "style_used": "gouache",
+  "metricool": {
+   "lang": 442438446,
+   "snap": 442468535
+  },
+  "len": [
+   33.6,
+   8.6
+  ],
+  "snap": "mothssnap"
  },
  "babybirds": {
   "title": "If You Touch a Baby Bird, Will Its Mom Reject It? The Truth Is Surprising 🐦",
@@ -1008,7 +1056,19 @@
   "cat": "PETS_ANIMALS",
   "style": "classic",
   "music": "ukulele 10",
-  "stamps": ""
+  "stamps": "",
+  "tag": "glim-2026-12-15-1900",
+  "slot": "2026-12-15 19:00",
+  "style_used": "gouache",
+  "metricool": {
+   "lang": 442438496,
+   "snap": 442468560
+  },
+  "len": [
+   32.2,
+   8.3
+  ],
+  "snap": "otterssnap"
  },
  "giraffeneck": {
   "title": "Did Giraffes Get Long Necks by Stretching? What Really Happened 🦒",
@@ -1025,6 +1085,18 @@
   "cat": "PETS_ANIMALS",
   "style": "sunny",
   "music": "ukulele 22",
-  "stamps": "1,5"
+  "stamps": "1,5",
+  "tag": "glim-2026-12-17-1900",
+  "slot": "2026-12-17 19:00",
+  "style_used": "gouache",
+  "metricool": {
+   "lang": 442438552,
+   "snap": 442468571
+  },
+  "len": [
+   33.8,
+   8.8
+  ],
+  "snap": "giraffenecksnap"
  }
 }
