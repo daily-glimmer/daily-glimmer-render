@@ -13,3 +13,4 @@ Datum/Slot | Frage | Länge lang/snap | Tag | Metricool lang/snap | Stil | Musik
 - Rückstand übersprungen (Frage schon von anderen Läufen eingeplant): babybirds (29.11. 13:00), duckfeet (28.11. 13:00), koalabear (10.12. 19:00).
 - Neue Videos: kein freier 19:00-Slot innerhalb der nächsten 3 Tage (26.11. Sonnenblumen, 27.–30.11. Rückstand) → keine Neuproduktion in diesem Lauf.
 - 2026-11-26 (Code-Aufgabe, Session 01XFtfdg4i2yh81qT7Bs9RmK): Rückstand-Branch beautiful-clarke-tk2d7y übernommen (backlog.done vorhanden). 19:00-Slots 27.–29.11. belegt (Rückstand), erster freier Glim-Slot frühestens 01.12. 19:00 → außerhalb von 3 Tagen, keine Neuproduktion.
+- 2026-11-27 (Code-Aufgabe, Session 01XFtfddLVDuh4W1qjj1c3yM): Stand von beautiful-clarke-fukuz2 übernommen (backlog.done vorhanden). Metricool: 19:00-Slots 28.–30.11. belegt (hiccups, thunder, moths); erster freier Glim-Slot frühestens 01.12. 19:00 → außerhalb von 3 Tagen, keine Neuproduktion.
